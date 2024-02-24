@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93394D902B8A5B8A003ABB24 /* PVTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93394D8F2B8A5B8A003ABB24 /* PVTabView.swift */; };
 		935265FB2B8A36A000580459 /* PitViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935265FA2B8A36A000580459 /* PitViewApp.swift */; };
-		935265FD2B8A36A000580459 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935265FC2B8A36A000580459 /* ContentView.swift */; };
 		935265FF2B8A36A200580459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935265FE2B8A36A200580459 /* Assets.xcassets */; };
 		935266022B8A36A200580459 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935266012B8A36A200580459 /* Preview Assets.xcassets */; };
+		937C3FF42B8A5CF100AD50BA /* PVAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF32B8A5CF100AD50BA /* PVAboutView.swift */; };
+		937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF62B8A5EC700AD50BA /* PVMainView.swift */; };
+		937C3FFA2B8A5F7C00AD50BA /* PVDriversView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */; };
+		937C3FFD2B8A5F9700AD50BA /* PVTracksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FFC2B8A5F9700AD50BA /* PVTracksView.swift */; };
+		937C40002B8A623900AD50BA /* PVSeasonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FFF2B8A623900AD50BA /* PVSeasonsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93394D8F2B8A5B8A003ABB24 /* PVTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTabView.swift; sourceTree = "<group>"; };
 		935265F72B8A36A000580459 /* PitView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		935265FA2B8A36A000580459 /* PitViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitViewApp.swift; sourceTree = "<group>"; };
-		935265FC2B8A36A000580459 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		935265FE2B8A36A200580459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		935266012B8A36A200580459 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		937C3FF32B8A5CF100AD50BA /* PVAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVAboutView.swift; sourceTree = "<group>"; };
+		937C3FF62B8A5EC700AD50BA /* PVMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVMainView.swift; sourceTree = "<group>"; };
+		937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVDriversView.swift; sourceTree = "<group>"; };
+		937C3FFC2B8A5F9700AD50BA /* PVTracksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTracksView.swift; sourceTree = "<group>"; };
+		937C3FFF2B8A623900AD50BA /* PVSeasonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVSeasonsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +42,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93394D8D2B8A5AFC003ABB24 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		93394D8E2B8A5B04003ABB24 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				937C3FFE2B8A621100AD50BA /* PVSeasonsView */,
+				937C3FFB2B8A5F8500AD50BA /* PVTracksView */,
+				937C3FF82B8A5F4A00AD50BA /* PVDriversView */,
+				937C3FF52B8A5E3900AD50BA /* PVMainView */,
+				937C3FF22B8A5CC000AD50BA /* PVAboutView */,
+				93394D8F2B8A5B8A003ABB24 /* PVTabView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		935265EE2B8A36A000580459 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +81,9 @@
 		935265F92B8A36A000580459 /* PitView */ = {
 			isa = PBXGroup;
 			children = (
+				93394D8E2B8A5B04003ABB24 /* Screens */,
+				93394D8D2B8A5AFC003ABB24 /* Views */,
 				935265FA2B8A36A000580459 /* PitViewApp.swift */,
-				935265FC2B8A36A000580459 /* ContentView.swift */,
 				935265FE2B8A36A200580459 /* Assets.xcassets */,
 				935266002B8A36A200580459 /* Preview Content */,
 			);
@@ -65,6 +96,46 @@
 				935266012B8A36A200580459 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		937C3FF22B8A5CC000AD50BA /* PVAboutView */ = {
+			isa = PBXGroup;
+			children = (
+				937C3FF32B8A5CF100AD50BA /* PVAboutView.swift */,
+			);
+			path = PVAboutView;
+			sourceTree = "<group>";
+		};
+		937C3FF52B8A5E3900AD50BA /* PVMainView */ = {
+			isa = PBXGroup;
+			children = (
+				937C3FF62B8A5EC700AD50BA /* PVMainView.swift */,
+			);
+			path = PVMainView;
+			sourceTree = "<group>";
+		};
+		937C3FF82B8A5F4A00AD50BA /* PVDriversView */ = {
+			isa = PBXGroup;
+			children = (
+				937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */,
+			);
+			path = PVDriversView;
+			sourceTree = "<group>";
+		};
+		937C3FFB2B8A5F8500AD50BA /* PVTracksView */ = {
+			isa = PBXGroup;
+			children = (
+				937C3FFC2B8A5F9700AD50BA /* PVTracksView.swift */,
+			);
+			path = PVTracksView;
+			sourceTree = "<group>";
+		};
+		937C3FFE2B8A621100AD50BA /* PVSeasonsView */ = {
+			isa = PBXGroup;
+			children = (
+				937C3FFF2B8A623900AD50BA /* PVSeasonsView.swift */,
+			);
+			path = PVSeasonsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +208,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				935265FD2B8A36A000580459 /* ContentView.swift in Sources */,
+				93394D902B8A5B8A003ABB24 /* PVTabView.swift in Sources */,
+				937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */,
+				937C3FFD2B8A5F9700AD50BA /* PVTracksView.swift in Sources */,
+				937C40002B8A623900AD50BA /* PVSeasonsView.swift in Sources */,
+				937C3FF42B8A5CF100AD50BA /* PVAboutView.swift in Sources */,
+				937C3FFA2B8A5F7C00AD50BA /* PVDriversView.swift in Sources */,
 				935265FB2B8A36A000580459 /* PitViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
