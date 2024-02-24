@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		935265FB2B8A36A000580459 /* pitviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935265FA2B8A36A000580459 /* pitviewApp.swift */; };
+		935265FB2B8A36A000580459 /* PitViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935265FA2B8A36A000580459 /* PitViewApp.swift */; };
 		935265FD2B8A36A000580459 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935265FC2B8A36A000580459 /* ContentView.swift */; };
 		935265FF2B8A36A200580459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935265FE2B8A36A200580459 /* Assets.xcassets */; };
 		935266022B8A36A200580459 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935266012B8A36A200580459 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		935265F72B8A36A000580459 /* pitview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pitview.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		935265FA2B8A36A000580459 /* pitviewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pitviewApp.swift; sourceTree = "<group>"; };
+		935265F72B8A36A000580459 /* PitView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		935265FA2B8A36A000580459 /* PitViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitViewApp.swift; sourceTree = "<group>"; };
 		935265FC2B8A36A000580459 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		935265FE2B8A36A200580459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		935266012B8A36A200580459 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -35,7 +35,7 @@
 		935265EE2B8A36A000580459 = {
 			isa = PBXGroup;
 			children = (
-				935265F92B8A36A000580459 /* pitview */,
+				935265F92B8A36A000580459 /* PitView */,
 				935265F82B8A36A000580459 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,20 +43,20 @@
 		935265F82B8A36A000580459 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				935265F72B8A36A000580459 /* pitview.app */,
+				935265F72B8A36A000580459 /* PitView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		935265F92B8A36A000580459 /* pitview */ = {
+		935265F92B8A36A000580459 /* PitView */ = {
 			isa = PBXGroup;
 			children = (
-				935265FA2B8A36A000580459 /* pitviewApp.swift */,
+				935265FA2B8A36A000580459 /* PitViewApp.swift */,
 				935265FC2B8A36A000580459 /* ContentView.swift */,
 				935265FE2B8A36A200580459 /* Assets.xcassets */,
 				935266002B8A36A200580459 /* Preview Content */,
 			);
-			path = pitview;
+			path = PitView;
 			sourceTree = "<group>";
 		};
 		935266002B8A36A200580459 /* Preview Content */ = {
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		935265F62B8A36A000580459 /* pitview */ = {
+		935265F62B8A36A000580459 /* PitView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 935266052B8A36A200580459 /* Build configuration list for PBXNativeTarget "pitview" */;
+			buildConfigurationList = 935266052B8A36A200580459 /* Build configuration list for PBXNativeTarget "PitView" */;
 			buildPhases = (
 				935265F32B8A36A000580459 /* Sources */,
 				935265F42B8A36A000580459 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = pitview;
+			name = PitView;
 			productName = pitview;
-			productReference = 935265F72B8A36A000580459 /* pitview.app */;
+			productReference = 935265F72B8A36A000580459 /* PitView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 935265F22B8A36A000580459 /* Build configuration list for PBXProject "pitview" */;
+			buildConfigurationList = 935265F22B8A36A000580459 /* Build configuration list for PBXProject "PitView" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				935265F62B8A36A000580459 /* pitview */,
+				935265F62B8A36A000580459 /* PitView */,
 			);
 		};
 /* End PBXProject section */
@@ -138,7 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				935265FD2B8A36A000580459 /* ContentView.swift in Sources */,
-				935265FB2B8A36A000580459 /* pitviewApp.swift in Sources */,
+				935265FB2B8A36A000580459 /* PitViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +325,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		935265F22B8A36A000580459 /* Build configuration list for PBXProject "pitview" */ = {
+		935265F22B8A36A000580459 /* Build configuration list for PBXProject "PitView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				935266032B8A36A200580459 /* Debug */,
@@ -334,7 +334,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		935266052B8A36A200580459 /* Build configuration list for PBXNativeTarget "pitview" */ = {
+		935266052B8A36A200580459 /* Build configuration list for PBXNativeTarget "PitView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				935266062B8A36A200580459 /* Debug */,

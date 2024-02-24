@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct pitviewApp: App {
+struct PitViewApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
