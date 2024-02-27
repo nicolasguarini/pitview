@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct PVMainView: View {
+    @StateObject var viewModel = PVMainViewModel()
+    
     var body: some View {
-        VStack {
-            Text("Main View")
+        ZStack {
+            NavigationView {
+                List {
+                    ForEach(viewModel.season.raceNames, id: \.self) { raceName in
+                        Text(raceName).padding()
+                    }
+                    
+                }.navigationTitle(viewModel.season.season + " Season")
+            }.task {
+                viewModel.getSeason()
+            }
+            
+            if viewModel.isLoading {
+                LoadingView()
+            }
         }
     }
 }

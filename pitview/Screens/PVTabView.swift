@@ -21,8 +21,6 @@ struct PVTabView: View {
             
             PVTracksView()
                 .tabItem { Label("Tracks", systemImage: "road.lanes.curved.right") }
-            
-            
         }
         .tint(.hotRed)
     }

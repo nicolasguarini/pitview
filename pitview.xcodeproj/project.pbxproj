@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9319F6DD2B8D4E96002842CD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319F6DC2B8D4E96002842CD /* NetworkManager.swift */; };
+		9319F6E02B8D4F63002842CD /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319F6DF2B8D4F63002842CD /* Season.swift */; };
+		9319F6E32B8D52AA002842CD /* PVError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319F6E22B8D52AA002842CD /* PVError.swift */; };
+		9319F6E52B8D5457002842CD /* PVMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319F6E42B8D5457002842CD /* PVMainViewModel.swift */; };
+		9319F6E82B8D5A08002842CD /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319F6E72B8D5A08002842CD /* LoadingView.swift */; };
+		9319F6EB2B8D6130002842CD /* MRData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319F6EA2B8D6130002842CD /* MRData.swift */; };
+		9319F6ED2B8D6142002842CD /* RaceTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319F6EC2B8D6142002842CD /* RaceTable.swift */; };
+		9319F6EF2B8D615B002842CD /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319F6EE2B8D615B002842CD /* Race.swift */; };
 		93394D902B8A5B8A003ABB24 /* PVTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93394D8F2B8A5B8A003ABB24 /* PVTabView.swift */; };
 		935265FB2B8A36A000580459 /* PitViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935265FA2B8A36A000580459 /* PitViewApp.swift */; };
 		935265FF2B8A36A200580459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935265FE2B8A36A200580459 /* Assets.xcassets */; };
@@ -19,6 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9319F6DC2B8D4E96002842CD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9319F6DF2B8D4F63002842CD /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
+		9319F6E22B8D52AA002842CD /* PVError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVError.swift; sourceTree = "<group>"; };
+		9319F6E42B8D5457002842CD /* PVMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVMainViewModel.swift; sourceTree = "<group>"; };
+		9319F6E72B8D5A08002842CD /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		9319F6EA2B8D6130002842CD /* MRData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRData.swift; sourceTree = "<group>"; };
+		9319F6EC2B8D6142002842CD /* RaceTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTable.swift; sourceTree = "<group>"; };
+		9319F6EE2B8D615B002842CD /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
 		93394D8F2B8A5B8A003ABB24 /* PVTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTabView.swift; sourceTree = "<group>"; };
 		935265F72B8A36A000580459 /* PitView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		935265FA2B8A36A000580459 /* PitViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitViewApp.swift; sourceTree = "<group>"; };
@@ -42,9 +58,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9319F6DB2B8D4E87002842CD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9319F6E12B8D529B002842CD /* Alerts */,
+				9319F6DC2B8D4E96002842CD /* NetworkManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9319F6DE2B8D4F53002842CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9319F6E92B8D610B002842CD /* Ergast */,
+				9319F6DF2B8D4F63002842CD /* Season.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9319F6E12B8D529B002842CD /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				9319F6E22B8D52AA002842CD /* PVError.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		9319F6E92B8D610B002842CD /* Ergast */ = {
+			isa = PBXGroup;
+			children = (
+				9319F6EA2B8D6130002842CD /* MRData.swift */,
+				9319F6EC2B8D6142002842CD /* RaceTable.swift */,
+				9319F6EE2B8D615B002842CD /* Race.swift */,
+			);
+			path = Ergast;
+			sourceTree = "<group>";
+		};
 		93394D8D2B8A5AFC003ABB24 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9319F6E72B8D5A08002842CD /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -81,6 +134,8 @@
 		935265F92B8A36A000580459 /* PitView */ = {
 			isa = PBXGroup;
 			children = (
+				9319F6DE2B8D4F53002842CD /* Model */,
+				9319F6DB2B8D4E87002842CD /* Utilities */,
 				93394D8E2B8A5B04003ABB24 /* Screens */,
 				93394D8D2B8A5AFC003ABB24 /* Views */,
 				935265FA2B8A36A000580459 /* PitViewApp.swift */,
@@ -110,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				937C3FF62B8A5EC700AD50BA /* PVMainView.swift */,
+				9319F6E42B8D5457002842CD /* PVMainViewModel.swift */,
 			);
 			path = PVMainView;
 			sourceTree = "<group>";
@@ -209,11 +265,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				93394D902B8A5B8A003ABB24 /* PVTabView.swift in Sources */,
+				9319F6E52B8D5457002842CD /* PVMainViewModel.swift in Sources */,
+				9319F6E02B8D4F63002842CD /* Season.swift in Sources */,
+				9319F6EB2B8D6130002842CD /* MRData.swift in Sources */,
+				9319F6EF2B8D615B002842CD /* Race.swift in Sources */,
 				937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */,
 				937C3FFD2B8A5F9700AD50BA /* PVTracksView.swift in Sources */,
+				9319F6E82B8D5A08002842CD /* LoadingView.swift in Sources */,
 				937C40002B8A623900AD50BA /* PVSeasonsView.swift in Sources */,
+				9319F6DD2B8D4E96002842CD /* NetworkManager.swift in Sources */,
 				937C3FF42B8A5CF100AD50BA /* PVAboutView.swift in Sources */,
 				937C3FFA2B8A5F7C00AD50BA /* PVDriversView.swift in Sources */,
+				9319F6E32B8D52AA002842CD /* PVError.swift in Sources */,
+				9319F6ED2B8D6142002842CD /* RaceTable.swift in Sources */,
 				935265FB2B8A36A000580459 /* PitViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
