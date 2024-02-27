@@ -9,6 +9,7 @@ import Foundation
 
 @MainActor final class PVMainViewModel: ObservableObject {
     @Published var season: SeasonData = SeasonData(season: "", raceNames: [""])
+    @Published var alertItem: AlertItem?
     @Published var isLoading = false
     
     func getSeason() {
@@ -22,13 +23,16 @@ import Foundation
                 if let pvError = error as? PVError {
                     switch pvError {
                     case .invalidData:
-                        print("Invalid data")
+                        alertItem = AlertContext.invalidData
                     case .invalidURL:
-                        print("Invalid URL")
+                        alertItem = AlertContext.invalidURL
                     }
                 } else {
-                    print("generic error")
+                    alertItem = AlertContext.invalidResponse
                 }
+                
+                alertItem = AlertContext.invalidResponse
+                isLoading = false
             }
         }
     }

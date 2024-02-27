@@ -15,6 +15,7 @@
 		9319F6EB2B8D6130002842CD /* MRData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319F6EA2B8D6130002842CD /* MRData.swift */; };
 		9319F6ED2B8D6142002842CD /* RaceTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319F6EC2B8D6142002842CD /* RaceTable.swift */; };
 		9319F6EF2B8D615B002842CD /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319F6EE2B8D615B002842CD /* Race.swift */; };
+		9319F6F12B8D63B0002842CD /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319F6F02B8D63B0002842CD /* Alert.swift */; };
 		93394D902B8A5B8A003ABB24 /* PVTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93394D8F2B8A5B8A003ABB24 /* PVTabView.swift */; };
 		935265FB2B8A36A000580459 /* PitViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935265FA2B8A36A000580459 /* PitViewApp.swift */; };
 		935265FF2B8A36A200580459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935265FE2B8A36A200580459 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		9319F6EA2B8D6130002842CD /* MRData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRData.swift; sourceTree = "<group>"; };
 		9319F6EC2B8D6142002842CD /* RaceTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTable.swift; sourceTree = "<group>"; };
 		9319F6EE2B8D615B002842CD /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
+		9319F6F02B8D63B0002842CD /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		93394D8F2B8A5B8A003ABB24 /* PVTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTabView.swift; sourceTree = "<group>"; };
 		935265F72B8A36A000580459 /* PitView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		935265FA2B8A36A000580459 /* PitViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitViewApp.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				9319F6E22B8D52AA002842CD /* PVError.swift */,
+				9319F6F02B8D63B0002842CD /* Alert.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				937C3FFA2B8A5F7C00AD50BA /* PVDriversView.swift in Sources */,
 				9319F6E32B8D52AA002842CD /* PVError.swift in Sources */,
 				9319F6ED2B8D6142002842CD /* RaceTable.swift in Sources */,
+				9319F6F12B8D63B0002842CD /* Alert.swift in Sources */,
 				935265FB2B8A36A000580459 /* PitViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

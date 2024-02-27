@@ -26,6 +26,10 @@ struct PVMainView: View {
             if viewModel.isLoading {
                 LoadingView()
             }
+        }.alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title,
+                  message: alertItem.message,
+                  dismissButton: alertItem.dismssButton)
         }
     }
 }
