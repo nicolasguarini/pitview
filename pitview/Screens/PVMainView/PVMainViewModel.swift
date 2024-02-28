@@ -8,7 +8,25 @@
 import Foundation
 
 @MainActor final class PVMainViewModel: ObservableObject {
-    @Published var season: SeasonData = SeasonData(season: "", raceNames: [""])
+    @Published var season: Season = Season(season: "", races: [Race(raceName: "")])
+    @Published var driverStandings: [DriverStanding] = [
+        DriverStanding(
+            position: "",
+            points: "",
+            driver: Driver(
+                driverId: "",
+                permanentNumber: "",
+                code: "",
+                givenName: "",
+                familyName: "",
+                dateOfBirth: "",
+                nationality: ""
+            ),
+            constructors: [
+                Constructor(constructorId: "", name: "", nationality: "")
+            ]
+        )
+    ]
     @Published var alertItem: AlertItem?
     @Published var isLoading = false
     
@@ -18,6 +36,7 @@ import Foundation
         Task {
             do {
                 season = try await NetworkManager.shared.getCurrentSeason()
+                driverStandings = try await NetworkManager.shared.getDriverStandings()
                 isLoading = false
             } catch {
                 if let pvError = error as? PVError {

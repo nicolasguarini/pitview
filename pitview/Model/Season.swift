@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SeasonData {
+struct Season {
     let season: String
-    let raceNames: [String]
+    let races: [Race]
 }

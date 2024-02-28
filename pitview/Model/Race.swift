@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Race: Decodable {
+struct Race: Codable {
     let raceName: String
 }

@@ -15,7 +15,7 @@ final class NetworkManager {
     
     private init() {}
     
-    func getCurrentSeason() async throws -> SeasonData {
+    func getCurrentSeason() async throws -> Season {
         guard let url = URL(string: NetworkManager.currentSeasonURL) else {
             throw PVError.invalidURL
         }
@@ -25,11 +25,28 @@ final class NetworkManager {
         do {
             let decoder = JSONDecoder()
             let response = try decoder.decode(ErgastResponse.self, from: data)
-            let season = response.MRData.RaceTable.season
-            let raceNames = response.MRData.RaceTable.Races.map { $0.raceName }
-            return SeasonData(season: season, raceNames: raceNames)
+            let season = response.mrData.raceTable!.season
+            let races = response.mrData.raceTable!.races
+            return Season(season: season, races: races)
         } catch {
             throw PVError.invalidData
+        }
+    }
+    
+    func getDriverStandings(season: String = "current") async throws -> [DriverStanding] {
+        let driverStandingsURL = NetworkManager.baseURL + season + "/driverStandings.json"
+        
+        guard let url = URL(string: driverStandingsURL) else {
+            throw PVError.invalidURL
+        }
+        
+        let (data, _) = try await URLSession.shared.data(from: url)
+        
+        do {
+            let decoder = JSONDecoder()
+            let response = try decoder.decode(ErgastResponse.self, from: data)
+            let driverStandings = response.mrData.standingsTable!.standingsLists[0].driverStandings
+            return driverStandings
         }
     }
 }

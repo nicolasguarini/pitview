@@ -12,15 +12,26 @@ struct PVMainView: View {
     
     var body: some View {
         ZStack {
-            NavigationView {
-                List {
-                    ForEach(viewModel.season.raceNames, id: \.self) { raceName in
-                        Text(raceName).padding()
+            VStack {
+                Text("2024 Word Championship")
+                
+                VStack {
+                    List {
+                        ForEach(viewModel.driverStandings, id: \.driver.code) { driverStanding in
+                            Text(driverStanding.driver.givenName + " " + driverStanding.driver.familyName)
+                        }
                     }
                     
-                }.navigationTitle(viewModel.season.season + " Season")
-            }.task {
-                viewModel.getSeason()
+                    Spacer()
+                    
+                    List {
+                        ForEach(viewModel.season.races, id: \.raceName) { race in
+                            Text(race.raceName)
+                        }
+                    }
+                }.task {
+                    viewModel.getSeason()
+                }
             }
             
             if viewModel.isLoading {

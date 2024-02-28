@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct RaceTable: Decodable {
+struct RaceTable: Codable {
     let season: String
-    let Races: [Race]
+    let races: [Race]
+    
+    private enum CodingKeys: String, CodingKey {
+        case season
+        case races = "Races"
+    }
 }

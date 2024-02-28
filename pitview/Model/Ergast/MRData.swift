@@ -7,10 +7,20 @@
 
 import Foundation
 
-struct MRData: Decodable {
-    let RaceTable: RaceTable
+struct MRData: Codable {
+    let raceTable: RaceTable?
+    let standingsTable: StandingsTable?
+    
+    private enum CodingKeys: String, CodingKey {
+        case raceTable = "RaceTable"
+        case standingsTable = "StandingsTable"
+    }
 }
 
-struct ErgastResponse: Decodable {
-    let MRData: MRData
+struct ErgastResponse: Codable {
+    let mrData: MRData
+    
+    private enum CodingKeys: String, CodingKey {
+        case mrData = "MRData"
+    }
 }

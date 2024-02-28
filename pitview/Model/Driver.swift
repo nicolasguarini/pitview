@@ -1,0 +1,44 @@
+//
+//  Driver.swift
+//  PitView
+//
+//  Created by Nicolas Guarini on 28/02/24.
+//
+
+import Foundation
+
+struct Driver: Codable {
+    let driverId: String
+    let permanentNumber: String
+    let code: String
+    let givenName: String
+    let familyName: String
+    let dateOfBirth: String
+    let nationality: String
+}
+
+struct DriverStanding: Codable {
+    let position: String
+    let points: String
+    let driver: Driver
+    let constructors: [Constructor]
+    
+    private enum CodingKeys: String, CodingKey {
+        case position
+        case points
+        case driver = "Driver"
+        case constructors = "Constructors"
+    }
+}
+
+struct DriverStandings: Codable {
+    let season: String
+    let round: String
+    let driverStandings: [DriverStanding]
+    
+    private enum CodingKeys: String, CodingKey {
+        case season
+        case round
+        case driverStandings = "DriverStandings"
+    }
+}
