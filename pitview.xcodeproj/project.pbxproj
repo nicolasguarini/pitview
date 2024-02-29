@@ -23,6 +23,7 @@
 		935265FB2B8A36A000580459 /* PitViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935265FA2B8A36A000580459 /* PitViewApp.swift */; };
 		935265FF2B8A36A200580459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935265FE2B8A36A200580459 /* Assets.xcassets */; };
 		935266022B8A36A200580459 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935266012B8A36A200580459 /* Preview Assets.xcassets */; };
+		936184A42B90CF1600E3CF20 /* DriverDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936184A32B90CF1600E3CF20 /* DriverDetailsView.swift */; };
 		937C3FF42B8A5CF100AD50BA /* PVAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF32B8A5CF100AD50BA /* PVAboutView.swift */; };
 		937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF62B8A5EC700AD50BA /* PVMainView.swift */; };
 		937C3FFA2B8A5F7C00AD50BA /* PVDriversView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */; };
@@ -48,6 +49,7 @@
 		935265FA2B8A36A000580459 /* PitViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitViewApp.swift; sourceTree = "<group>"; };
 		935265FE2B8A36A200580459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		935266012B8A36A200580459 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		936184A32B90CF1600E3CF20 /* DriverDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsView.swift; sourceTree = "<group>"; };
 		937C3FF32B8A5CF100AD50BA /* PVAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVAboutView.swift; sourceTree = "<group>"; };
 		937C3FF62B8A5EC700AD50BA /* PVMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVMainView.swift; sourceTree = "<group>"; };
 		937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVDriversView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				9319F6E72B8D5A08002842CD /* LoadingView.swift */,
+				936184A32B90CF1600E3CF20 /* DriverDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				93394D902B8A5B8A003ABB24 /* PVTabView.swift in Sources */,
 				9319F6E52B8D5457002842CD /* PVMainViewModel.swift in Sources */,
 				9319F6E02B8D4F63002842CD /* Season.swift in Sources */,
+				936184A42B90CF1600E3CF20 /* DriverDetailsView.swift in Sources */,
 				9319F6EB2B8D6130002842CD /* MRData.swift in Sources */,
 				9319F6EF2B8D615B002842CD /* Race.swift in Sources */,
 				937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */,

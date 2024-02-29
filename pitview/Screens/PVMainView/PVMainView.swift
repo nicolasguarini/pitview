@@ -13,12 +13,17 @@ struct PVMainView: View {
     var body: some View {
         ZStack {
             VStack {
-                Text("2024 Word Championship")
+                Text(viewModel.season.season + " World Championship").font(.title).bold()
                 
                 VStack {
                     List {
                         ForEach(viewModel.driverStandings, id: \.driver.code) { driverStanding in
-                            Text(driverStanding.driver.givenName + " " + driverStanding.driver.familyName)
+                            Button(action: {
+                                viewModel.selectedDriver = driverStanding.driver
+                                viewModel.isShowingDriverDetails = true
+                            }) {
+                                Text(driverStanding.driver.givenName + " " + driverStanding.driver.familyName)
+                            }
                         }
                     }
                     
@@ -29,9 +34,9 @@ struct PVMainView: View {
                             Text(race.raceName)
                         }
                     }
-                }.task {
-                    viewModel.getSeason()
                 }
+            }.task {
+                viewModel.getSeason()
             }
             
             if viewModel.isLoading {
@@ -41,6 +46,14 @@ struct PVMainView: View {
             Alert(title: alertItem.title,
                   message: alertItem.message,
                   dismissButton: alertItem.dismssButton)
+        }
+        .sheet(isPresented: $viewModel.isShowingDriverDetails) {
+            if let driver = viewModel.selectedDriver {
+                DriverDetailsView(
+                    isPresented: $viewModel.isShowingDriverDetails,
+                    driver: driver
+                )
+            }
         }
     }
 }

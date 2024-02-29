@@ -29,6 +29,8 @@ import Foundation
     ]
     @Published var alertItem: AlertItem?
     @Published var isLoading = false
+    @Published var selectedDriver: Driver? = nil
+    @Published var isShowingDriverDetails = false
     
     func getSeason() {
         isLoading = true
