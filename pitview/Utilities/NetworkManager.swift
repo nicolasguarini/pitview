@@ -29,6 +29,7 @@ final class NetworkManager {
             let races = response.mrData.raceTable!.races
             return Season(season: season, races: races)
         } catch {
+            print("Error decoding JSON: \(error.localizedDescription)")
             throw PVError.invalidData
         }
     }

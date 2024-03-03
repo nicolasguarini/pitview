@@ -11,36 +11,40 @@ struct PVMainView: View {
     @StateObject var viewModel = PVMainViewModel()
     
     var body: some View {
-        ZStack {
-            VStack {
-                Text(viewModel.season.season + " World Championship").font(.title).bold()
-                
+        NavigationView {
+            ZStack {
                 VStack {
-                    List {
-                        ForEach(viewModel.driverStandings, id: \.driver.code) { driverStanding in
-                            Button(action: {
-                                viewModel.selectedDriver = driverStanding.driver
-                                viewModel.isShowingDriverDetails = true
-                            }) {
-                                Text(driverStanding.driver.givenName + " " + driverStanding.driver.familyName)
+                    Text(viewModel.season.season + " World Championship").font(.title).bold().padding()
+                    
+                    VStack {
+                        List {
+                            ForEach(viewModel.driverStandings, id: \.driver.code) { driverStanding in
+                                Button(action: {
+                                    viewModel.selectedDriver = driverStanding.driver
+                                    viewModel.isShowingDriverDetails = true
+                                }) {
+                                    Text(driverStanding.driver.givenName + " " + driverStanding.driver.familyName)
+                                }
+                            }
+                        }
+                        
+                        Spacer()
+                        
+                        List {
+                            ForEach(viewModel.season.races, id: \.raceName) { race in
+                                NavigationLink(destination: PVRaceView(race: race), label: {
+                                    Text(race.raceName)
+                                })
                             }
                         }
                     }
-                    
-                    Spacer()
-                    
-                    List {
-                        ForEach(viewModel.season.races, id: \.raceName) { race in
-                            Text(race.raceName)
-                        }
-                    }
+                }.task {
+                    viewModel.getSeason()
                 }
-            }.task {
-                viewModel.getSeason()
-            }
-            
-            if viewModel.isLoading {
-                LoadingView()
+                
+                if viewModel.isLoading {
+                    LoadingView()
+                }
             }
         }.alert(item: $viewModel.alertItem) { alertItem in
             Alert(title: alertItem.title,

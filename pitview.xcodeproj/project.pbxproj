@@ -24,6 +24,10 @@
 		935265FF2B8A36A200580459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935265FE2B8A36A200580459 /* Assets.xcassets */; };
 		935266022B8A36A200580459 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935266012B8A36A200580459 /* Preview Assets.xcassets */; };
 		936184A42B90CF1600E3CF20 /* DriverDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936184A32B90CF1600E3CF20 /* DriverDetailsView.swift */; };
+		936B62052B9522F500D0BB10 /* PVRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936B62042B9522F500D0BB10 /* PVRaceView.swift */; };
+		936B62092B95304400D0BB10 /* Circuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936B62082B95304400D0BB10 /* Circuit.swift */; };
+		936B620B2B9531B600D0BB10 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936B620A2B9531B600D0BB10 /* MockData.swift */; };
+		936B620D2B95321900D0BB10 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936B620C2B95321900D0BB10 /* Location.swift */; };
 		937C3FF42B8A5CF100AD50BA /* PVAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF32B8A5CF100AD50BA /* PVAboutView.swift */; };
 		937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF62B8A5EC700AD50BA /* PVMainView.swift */; };
 		937C3FFA2B8A5F7C00AD50BA /* PVDriversView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */; };
@@ -50,6 +54,10 @@
 		935265FE2B8A36A200580459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		935266012B8A36A200580459 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		936184A32B90CF1600E3CF20 /* DriverDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsView.swift; sourceTree = "<group>"; };
+		936B62042B9522F500D0BB10 /* PVRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVRaceView.swift; sourceTree = "<group>"; };
+		936B62082B95304400D0BB10 /* Circuit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circuit.swift; sourceTree = "<group>"; };
+		936B620A2B9531B600D0BB10 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		936B620C2B95321900D0BB10 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		937C3FF32B8A5CF100AD50BA /* PVAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVAboutView.swift; sourceTree = "<group>"; };
 		937C3FF62B8A5EC700AD50BA /* PVMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVMainView.swift; sourceTree = "<group>"; };
 		937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVDriversView.swift; sourceTree = "<group>"; };
@@ -85,6 +93,9 @@
 				9319F6EE2B8D615B002842CD /* Race.swift */,
 				931B1B352B8FD8A200B13D99 /* Constructor.swift */,
 				931B1B372B8FD8C300B13D99 /* Driver.swift */,
+				936B62082B95304400D0BB10 /* Circuit.swift */,
+				936B620A2B9531B600D0BB10 /* MockData.swift */,
+				936B620C2B95321900D0BB10 /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,6 +131,7 @@
 		93394D8E2B8A5B04003ABB24 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				936B62032B9522E000D0BB10 /* PVRaceView */,
 				937C3FFE2B8A621100AD50BA /* PVSeasonsView */,
 				937C3FFB2B8A5F8500AD50BA /* PVTracksView */,
 				937C3FF82B8A5F4A00AD50BA /* PVDriversView */,
@@ -166,6 +178,14 @@
 				935266012B8A36A200580459 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		936B62032B9522E000D0BB10 /* PVRaceView */ = {
+			isa = PBXGroup;
+			children = (
+				936B62042B9522F500D0BB10 /* PVRaceView.swift */,
+			);
+			path = PVRaceView;
 			sourceTree = "<group>";
 		};
 		937C3FF22B8A5CC000AD50BA /* PVAboutView */ = {
@@ -281,6 +301,7 @@
 			files = (
 				93394D902B8A5B8A003ABB24 /* PVTabView.swift in Sources */,
 				9319F6E52B8D5457002842CD /* PVMainViewModel.swift in Sources */,
+				936B620B2B9531B600D0BB10 /* MockData.swift in Sources */,
 				9319F6E02B8D4F63002842CD /* Season.swift in Sources */,
 				936184A42B90CF1600E3CF20 /* DriverDetailsView.swift in Sources */,
 				9319F6EB2B8D6130002842CD /* MRData.swift in Sources */,
@@ -288,13 +309,16 @@
 				937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */,
 				931B1B3A2B8FD90000B13D99 /* StandingsTable.swift in Sources */,
 				937C3FFD2B8A5F9700AD50BA /* PVTracksView.swift in Sources */,
+				936B620D2B95321900D0BB10 /* Location.swift in Sources */,
 				9319F6E82B8D5A08002842CD /* LoadingView.swift in Sources */,
 				937C40002B8A623900AD50BA /* PVSeasonsView.swift in Sources */,
 				9319F6DD2B8D4E96002842CD /* NetworkManager.swift in Sources */,
 				937C3FF42B8A5CF100AD50BA /* PVAboutView.swift in Sources */,
 				931B1B362B8FD8A200B13D99 /* Constructor.swift in Sources */,
 				937C3FFA2B8A5F7C00AD50BA /* PVDriversView.swift in Sources */,
+				936B62052B9522F500D0BB10 /* PVRaceView.swift in Sources */,
 				9319F6E32B8D52AA002842CD /* PVError.swift in Sources */,
+				936B62092B95304400D0BB10 /* Circuit.swift in Sources */,
 				9319F6ED2B8D6142002842CD /* RaceTable.swift in Sources */,
 				931B1B382B8FD8C300B13D99 /* Driver.swift in Sources */,
 				9319F6F12B8D63B0002842CD /* Alert.swift in Sources */,

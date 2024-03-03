@@ -8,25 +8,8 @@
 import Foundation
 
 @MainActor final class PVMainViewModel: ObservableObject {
-    @Published var season: Season = Season(season: "", races: [Race(raceName: "")])
-    @Published var driverStandings: [DriverStanding] = [
-        DriverStanding(
-            position: "",
-            points: "",
-            driver: Driver(
-                driverId: "",
-                permanentNumber: "",
-                code: "",
-                givenName: "",
-                familyName: "",
-                dateOfBirth: "",
-                nationality: ""
-            ),
-            constructors: [
-                Constructor(constructorId: "", name: "", nationality: "")
-            ]
-        )
-    ]
+    @Published var season: Season = MockData.mockSeason
+    @Published var driverStandings: [DriverStanding] = [MockData.mockDriverStanding]
     @Published var alertItem: AlertItem?
     @Published var isLoading = false
     @Published var selectedDriver: Driver? = nil
