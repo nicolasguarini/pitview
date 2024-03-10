@@ -21,6 +21,7 @@ struct PVMainView: View {
                             ForEach(viewModel.driverStandings, id: \.driver.code) { driverStanding in
                                 Button(action: {
                                     viewModel.selectedDriver = driverStanding.driver
+                                    viewModel.selectedConstructor = driverStanding.constructors[0]
                                     viewModel.isShowingDriverDetails = true
                                 }) {
                                     Text(driverStanding.driver.givenName + " " + driverStanding.driver.familyName)
@@ -52,10 +53,12 @@ struct PVMainView: View {
                   dismissButton: alertItem.dismssButton)
         }
         .sheet(isPresented: $viewModel.isShowingDriverDetails) {
-            if let driver = viewModel.selectedDriver {
+            if let driver = viewModel.selectedDriver, 
+                let constructor = viewModel.selectedConstructor {
                 DriverDetailsView(
                     isPresented: $viewModel.isShowingDriverDetails,
-                    driver: driver
+                    driver: driver,
+                    constructor: constructor
                 )
             }
         }

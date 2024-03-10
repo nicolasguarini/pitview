@@ -10,6 +10,7 @@ import SwiftUI
 struct DriverDetailsView: View {
     @Binding var isPresented: Bool
     let driver: Driver
+    let constructor: Constructor
     
     var body: some View {
         VStack {
@@ -38,14 +39,16 @@ struct DriverDetailsView: View {
                 .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 280)
                 
                 VStack {
-                    Text(" \(driver.givenName) \(driver.familyName)")
+                    Text("\(driver.givenName) \(driver.familyName)")
                         .font(.f1FontRegular(size: 18))
-                        .padding().lineSpacing(10).multilineTextAlignment(.center)
+                        .padding().lineSpacing(10).fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.center)
                     
-                    Text("AGE: \(calculateAge(dateString: driver.dateOfBirth) ?? 0)")
-                        .font(.f1FontRegular(size: 14))
+                    if calculateAge(dateString: driver.dateOfBirth) != nil {
+                        Text("AGE: \(calculateAge(dateString: driver.dateOfBirth) ?? 0)")
+                            .font(.f1FontRegular(size: 14))
+                    }
                     
-                    Image("ferrari")
+                    Image(constructor.constructorId)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 80)
@@ -64,22 +67,24 @@ struct DriverDetailsView: View {
             .frame(minWidth: 0, maxWidth: .infinity)
             .padding(.vertical)
 
+            
+            VStack(alignment: .leading, spacing: 25) {
+                if driver.code != nil {
+                    Text("Code: \(driver.code!)")
+                }
+                
+                Text("Number: \(driver.permanentNumber)")
+                
+                if driver.dateOfBirth != "" {
+                    Text("Date of birth: \(driver.dateOfBirth)")
+                }
+                
+                Text("Nationality: \(driver.nationality)").frame(maxWidth: .infinity, alignment: .leading)
+                
+            }.frame(minWidth: 0, maxWidth: .infinity).padding().font(.f1FontRegular(size: 14))
+            
+            Spacer()
         }
-        
-        VStack(alignment: .leading, spacing: 25) {
-            if driver.code != nil {
-                Text("Code: \(driver.code!)")
-            }
-            
-            Text("Number: \(driver.permanentNumber)")
-            
-            Text("Date of birth: \(driver.dateOfBirth)")
-            
-            Text("Nationality: \(driver.nationality)").frame(maxWidth: .infinity, alignment: .leading)
-            
-        }.frame(minWidth: 0, maxWidth: .infinity).padding().font(.f1FontRegular(size: 14))
-        
-        Spacer()
     }
     
     func calculateAge(dateString: String) -> Int? {
