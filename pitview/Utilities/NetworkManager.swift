@@ -48,6 +48,9 @@ final class NetworkManager {
             let response = try decoder.decode(ErgastResponse.self, from: data)
             let driverStandings = response.mrData.standingsTable!.standingsLists[0].driverStandings
             return driverStandings
+        } catch {
+            print("Error decoding JSON: \(error.localizedDescription)")
+            throw PVError.invalidData
         }
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 struct Driver: Codable {
     let driverId: String
     let permanentNumber: String
-    let code: String
+    let code: String?
     let givenName: String
     let familyName: String
     let dateOfBirth: String

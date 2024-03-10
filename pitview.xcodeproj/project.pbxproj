@@ -19,6 +19,13 @@
 		931B1B362B8FD8A200B13D99 /* Constructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931B1B352B8FD8A200B13D99 /* Constructor.swift */; };
 		931B1B382B8FD8C300B13D99 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931B1B372B8FD8C300B13D99 /* Driver.swift */; };
 		931B1B3A2B8FD90000B13D99 /* StandingsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931B1B392B8FD90000B13D99 /* StandingsTable.swift */; };
+		932AEFD52B9C743600FB00BA /* Formula1-Wide.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 932AEFCF2B9C743600FB00BA /* Formula1-Wide.ttf */; };
+		932AEFD62B9C743600FB00BA /* Formula1-Regular-1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 932AEFD02B9C743600FB00BA /* Formula1-Regular-1.ttf */; };
+		932AEFD72B9C743600FB00BA /* Formula1-Bold-4.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 932AEFD12B9C743600FB00BA /* Formula1-Bold-4.ttf */; };
+		932AEFD82B9C743600FB00BA /* Formula1-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 932AEFD22B9C743600FB00BA /* Formula1-Italic.ttf */; };
+		932AEFD92B9C743600FB00BA /* Formula1-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 932AEFD32B9C743600FB00BA /* Formula1-Black.ttf */; };
+		932AEFDA2B9C743600FB00BA /* Formula1-Bold_web.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 932AEFD42B9C743600FB00BA /* Formula1-Bold_web.ttf */; };
+		932AEFDC2B9C74B500FB00BA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AEFDB2B9C74B500FB00BA /* Font.swift */; };
 		93394D902B8A5B8A003ABB24 /* PVTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93394D8F2B8A5B8A003ABB24 /* PVTabView.swift */; };
 		935265FB2B8A36A000580459 /* PitViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935265FA2B8A36A000580459 /* PitViewApp.swift */; };
 		935265FF2B8A36A200580459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935265FE2B8A36A200580459 /* Assets.xcassets */; };
@@ -36,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9313D4832B9C665200E49B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9313D4852B9C669A00E49B54 /* project.pbxproj */ = {isa = PBXFileReference; lastKnownFileType = text.pbxproject; name = project.pbxproj; path = PitView.xcodeproj/project.pbxproj; sourceTree = "<group>"; };
 		9319F6DC2B8D4E96002842CD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9319F6DF2B8D4F63002842CD /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		9319F6E22B8D52AA002842CD /* PVError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVError.swift; sourceTree = "<group>"; };
@@ -48,6 +57,13 @@
 		931B1B352B8FD8A200B13D99 /* Constructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constructor.swift; sourceTree = "<group>"; };
 		931B1B372B8FD8C300B13D99 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		931B1B392B8FD90000B13D99 /* StandingsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsTable.swift; sourceTree = "<group>"; };
+		932AEFCF2B9C743600FB00BA /* Formula1-Wide.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Wide.ttf"; sourceTree = "<group>"; };
+		932AEFD02B9C743600FB00BA /* Formula1-Regular-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Regular-1.ttf"; sourceTree = "<group>"; };
+		932AEFD12B9C743600FB00BA /* Formula1-Bold-4.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Bold-4.ttf"; sourceTree = "<group>"; };
+		932AEFD22B9C743600FB00BA /* Formula1-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Italic.ttf"; sourceTree = "<group>"; };
+		932AEFD32B9C743600FB00BA /* Formula1-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Black.ttf"; sourceTree = "<group>"; };
+		932AEFD42B9C743600FB00BA /* Formula1-Bold_web.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Bold_web.ttf"; sourceTree = "<group>"; };
+		932AEFDB2B9C74B500FB00BA /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		93394D8F2B8A5B8A003ABB24 /* PVTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTabView.swift; sourceTree = "<group>"; };
 		935265F72B8A36A000580459 /* PitView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		935265FA2B8A36A000580459 /* PitViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitViewApp.swift; sourceTree = "<group>"; };
@@ -76,9 +92,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9313D4842B9C669A00E49B54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9313D4852B9C669A00E49B54 /* project.pbxproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9313D4962B9C6C6A00E49B54 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				932AEFD32B9C743600FB00BA /* Formula1-Black.ttf */,
+				932AEFD42B9C743600FB00BA /* Formula1-Bold_web.ttf */,
+				932AEFD12B9C743600FB00BA /* Formula1-Bold-4.ttf */,
+				932AEFD22B9C743600FB00BA /* Formula1-Italic.ttf */,
+				932AEFD02B9C743600FB00BA /* Formula1-Regular-1.ttf */,
+				932AEFCF2B9C743600FB00BA /* Formula1-Wide.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		9319F6DB2B8D4E87002842CD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				932AEFDE2B9C74E800FB00BA /* Extensions */,
 				9319F6E12B8D529B002842CD /* Alerts */,
 				9319F6DC2B8D4E96002842CD /* NetworkManager.swift */,
 			);
@@ -119,6 +157,22 @@
 			path = Ergast;
 			sourceTree = "<group>";
 		};
+		932AEFC62B9C73DE00FB00BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9313D4962B9C6C6A00E49B54 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		932AEFDE2B9C74E800FB00BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				932AEFDB2B9C74B500FB00BA /* Font.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		93394D8D2B8A5AFC003ABB24 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +201,7 @@
 			children = (
 				935265F92B8A36A000580459 /* PitView */,
 				935265F82B8A36A000580459 /* Products */,
+				9313D4842B9C669A00E49B54 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +216,8 @@
 		935265F92B8A36A000580459 /* PitView */ = {
 			isa = PBXGroup;
 			children = (
+				932AEFC62B9C73DE00FB00BA /* Resources */,
+				9313D4832B9C665200E49B54 /* Info.plist */,
 				9319F6DE2B8D4F53002842CD /* Model */,
 				9319F6DB2B8D4E87002842CD /* Utilities */,
 				93394D8E2B8A5B04003ABB24 /* Screens */,
@@ -288,7 +345,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				935266022B8A36A200580459 /* Preview Assets.xcassets in Resources */,
+				932AEFD82B9C743600FB00BA /* Formula1-Italic.ttf in Resources */,
+				932AEFD52B9C743600FB00BA /* Formula1-Wide.ttf in Resources */,
+				932AEFDA2B9C743600FB00BA /* Formula1-Bold_web.ttf in Resources */,
+				932AEFD62B9C743600FB00BA /* Formula1-Regular-1.ttf in Resources */,
+				932AEFD92B9C743600FB00BA /* Formula1-Black.ttf in Resources */,
 				935265FF2B8A36A200580459 /* Assets.xcassets in Resources */,
+				932AEFD72B9C743600FB00BA /* Formula1-Bold-4.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +381,7 @@
 				937C3FFA2B8A5F7C00AD50BA /* PVDriversView.swift in Sources */,
 				936B62052B9522F500D0BB10 /* PVRaceView.swift in Sources */,
 				9319F6E32B8D52AA002842CD /* PVError.swift in Sources */,
+				932AEFDC2B9C74B500FB00BA /* Font.swift in Sources */,
 				936B62092B95304400D0BB10 /* Circuit.swift in Sources */,
 				9319F6ED2B8D6142002842CD /* RaceTable.swift in Sources */,
 				931B1B382B8FD8C300B13D99 /* Driver.swift in Sources */,
@@ -459,6 +523,7 @@
 				DEVELOPMENT_TEAM = J3YBPSUMKU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PitView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -488,6 +553,7 @@
 				DEVELOPMENT_TEAM = J3YBPSUMKU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PitView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
