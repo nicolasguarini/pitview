@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FlagsKit
 
 struct DriverDetailsView: View {
     @Binding var isPresented: Bool
@@ -17,7 +18,7 @@ struct DriverDetailsView: View {
             HStack {
                 Spacer()
                 
-                Text("Driver Details")
+                Text("\(driver.givenName) \(driver.familyName)")
                     .font(.f1FontBold(size: 20)).padding()
                 
                 Spacer()
@@ -39,12 +40,17 @@ struct DriverDetailsView: View {
                 .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 280)
                 
                 VStack {
-                    Text("\(driver.givenName) \(driver.familyName)")
-                        .font(.f1FontRegular(size: 18))
-                        .padding().lineSpacing(10).fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.center)
+                    HStack(spacing: 18) {
+                        Text(driver.code ?? "")
+                            .font(.f1FontBold(size: 18))
+                        
+                        FlagView(countryCode: CountryCodes.getCountryCode(for: driver.nationality) ?? "").frame(width: 20, height: 20)
+                        
+                    }.padding()
+                    
                     
                     if calculateAge(dateString: driver.dateOfBirth) != nil {
-                        Text("AGE: \(calculateAge(dateString: driver.dateOfBirth) ?? 0)")
+                        Text("\(calculateAge(dateString: driver.dateOfBirth) ?? 0) y/o")
                             .font(.f1FontRegular(size: 14))
                     }
                     
@@ -58,7 +64,7 @@ struct DriverDetailsView: View {
                         
                     }, label: {
                         Text("Season Data")
-                    }).buttonStyle(.bordered).tint(.warmWhite)
+                    }).buttonStyle(.bordered)
                 }
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .padding(.vertical)
@@ -68,18 +74,32 @@ struct DriverDetailsView: View {
             .padding(.vertical)
 
             
-            VStack(alignment: .leading, spacing: 25) {
-                if driver.code != nil {
-                    Text("Code: \(driver.code!)")
+            HStack(spacing: 17) {
+                VStack {
+                    Text("Number").font(.f1FontBold(size: 14))
+                    
+                    Text(driver.permanentNumber).font(.f1FontBlack(size: 28))
                 }
                 
-                Text("Number: \(driver.permanentNumber)")
+                Divider().frame(height: 35)
                 
                 if driver.dateOfBirth != "" {
-                    Text("Date of birth: \(driver.dateOfBirth)")
+                    VStack(spacing: 10) {
+                        Text("Birthday").font(.f1FontBold(size: 14))
+                        
+                        Text(driver.dateOfBirth).font(.f1FontBold(size: 20))
+                    }
+                    
                 }
                 
-                Text("Nationality: \(driver.nationality)").frame(maxWidth: .infinity, alignment: .leading)
+                Divider().frame(height: 35)
+                
+                
+                VStack(spacing: 10) {
+                    Text("Team").font(.f1FontBold(size: 14))
+                    
+                    FlagView(countryCode: CountryCodes.getCountryCode(for: constructor.nationality) ?? "").frame(width: 20, height: 20)
+                }
                 
             }.frame(minWidth: 0, maxWidth: .infinity).padding().font(.f1FontRegular(size: 14))
             
@@ -99,4 +119,12 @@ struct DriverDetailsView: View {
             return nil
         }
     }
+}
+
+#Preview {
+    DriverDetailsView(
+        isPresented: .constant(true),
+        driver: MockData.mockDriver,
+        constructor: MockData.mockConstructor
+    )
 }

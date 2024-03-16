@@ -30,6 +30,8 @@
 		935265FB2B8A36A000580459 /* PitViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935265FA2B8A36A000580459 /* PitViewApp.swift */; };
 		935265FF2B8A36A200580459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935265FE2B8A36A200580459 /* Assets.xcassets */; };
 		935266022B8A36A200580459 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935266012B8A36A200580459 /* Preview Assets.xcassets */; };
+		935BBAE32BA6548B00F23E8B /* FlagsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 935BBAE22BA6548B00F23E8B /* FlagsKit */; };
+		935BBAE52BA656A100F23E8B /* CountryCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935BBAE42BA656A100F23E8B /* CountryCodes.swift */; };
 		936184A42B90CF1600E3CF20 /* DriverDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936184A32B90CF1600E3CF20 /* DriverDetailsView.swift */; };
 		936B62052B9522F500D0BB10 /* PVRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936B62042B9522F500D0BB10 /* PVRaceView.swift */; };
 		936B62092B95304400D0BB10 /* Circuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936B62082B95304400D0BB10 /* Circuit.swift */; };
@@ -69,6 +71,7 @@
 		935265FA2B8A36A000580459 /* PitViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitViewApp.swift; sourceTree = "<group>"; };
 		935265FE2B8A36A200580459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		935266012B8A36A200580459 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		935BBAE42BA656A100F23E8B /* CountryCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodes.swift; sourceTree = "<group>"; };
 		936184A32B90CF1600E3CF20 /* DriverDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsView.swift; sourceTree = "<group>"; };
 		936B62042B9522F500D0BB10 /* PVRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVRaceView.swift; sourceTree = "<group>"; };
 		936B62082B95304400D0BB10 /* Circuit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circuit.swift; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				935BBAE32BA6548B00F23E8B /* FlagsKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +123,7 @@
 				932AEFDE2B9C74E800FB00BA /* Extensions */,
 				9319F6E12B8D529B002842CD /* Alerts */,
 				9319F6DC2B8D4E96002842CD /* NetworkManager.swift */,
+				935BBAE42BA656A100F23E8B /* CountryCodes.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -302,6 +307,9 @@
 			dependencies = (
 			);
 			name = PitView;
+			packageProductDependencies = (
+				935BBAE22BA6548B00F23E8B /* FlagsKit */,
+			);
 			productName = pitview;
 			productReference = 935265F72B8A36A000580459 /* PitView.app */;
 			productType = "com.apple.product-type.application";
@@ -330,6 +338,9 @@
 				Base,
 			);
 			mainGroup = 935265EE2B8A36A000580459;
+			packageReferences = (
+				935BBAE12BA6548B00F23E8B /* XCRemoteSwiftPackageReference "FlagsKit" */,
+			);
 			productRefGroup = 935265F82B8A36A000580459 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -369,6 +380,7 @@
 				936184A42B90CF1600E3CF20 /* DriverDetailsView.swift in Sources */,
 				9319F6EB2B8D6130002842CD /* MRData.swift in Sources */,
 				9319F6EF2B8D615B002842CD /* Race.swift in Sources */,
+				935BBAE52BA656A100F23E8B /* CountryCodes.swift in Sources */,
 				937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */,
 				931B1B3A2B8FD90000B13D99 /* StandingsTable.swift in Sources */,
 				937C3FFD2B8A5F9700AD50BA /* PVTracksView.swift in Sources */,
@@ -594,6 +606,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		935BBAE12BA6548B00F23E8B /* XCRemoteSwiftPackageReference "FlagsKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pichukov/FlagsKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		935BBAE22BA6548B00F23E8B /* FlagsKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 935BBAE12BA6548B00F23E8B /* XCRemoteSwiftPackageReference "FlagsKit" */;
+			productName = FlagsKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 935265EF2B8A36A000580459 /* Project object */;
 }
