@@ -14,19 +14,33 @@ struct PVMainView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    Text(viewModel.season.season + " World Championship").font(.title).bold().padding()
+                    Text("PitView").font(.f1FontBold(size: 24)).bold().padding()
                     
                     VStack {
-                        List {
-                            ForEach(viewModel.driverStandings, id: \.driver.code) { driverStanding in
+                        Text("Drivers").font(.f1FontItalic(size: 22))
+                        
+                        
+                        ForEach(viewModel.driverStandings.first(5), id: \.driver.code) { driverStanding in
                                 Button(action: {
                                     viewModel.selectedDriver = driverStanding.driver
                                     viewModel.selectedConstructor = driverStanding.constructors[0]
                                     viewModel.isShowingDriverDetails = true
                                 }) {
-                                    Text(driverStanding.driver.givenName + " " + driverStanding.driver.familyName)
+                                    HStack {
+                                        Text(driverStanding.position)
+                                        
+                                        Text(driverStanding.driver.givenName + " " + driverStanding.driver.familyName).font(Font.f1FontBold(size: 16))
+                                        
+                                        Spacer()
+                                        
+                                        Text(driverStanding.points + " pt")
+                                    }.font(Font.f1FontRegular(size: 16))
+                                        .padding()
+                                        .foregroundColor(.primary)
+                                    
+                                    
                                 }
-                            }
+                            
                         }
                         
                         Spacer()
