@@ -31,14 +31,4 @@ struct DriverStanding: Codable {
     }
 }
 
-struct DriverStandings: Codable {
-    let season: String
-    let round: String
-    let driverStandings: [DriverStanding]
-    
-    private enum CodingKeys: String, CodingKey {
-        case season
-        case round
-        case driverStandings = "DriverStandings"
-    }
-}
+

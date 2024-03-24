@@ -10,6 +10,7 @@ import Foundation
 @MainActor final class PVMainViewModel: ObservableObject {
     @Published var season: Season = MockData.mockSeason
     @Published var driverStandings: [DriverStanding] = [MockData.mockDriverStanding]
+    @Published var constructorStandings: [ConstructorStanding] = [MockData.mockConstructorStanding]
     @Published var alertItem: AlertItem?
     @Published var isLoading = false
     @Published var selectedDriver: Driver? = nil
@@ -23,6 +24,7 @@ import Foundation
             do {
                 season = try await NetworkManager.shared.getCurrentSeason()
                 driverStandings = try await NetworkManager.shared.getDriverStandings()
+                constructorStandings = try await NetworkManager.shared.getConstructorStandings()
                 isLoading = false
             } catch {
                 if let pvError = error as? PVError {

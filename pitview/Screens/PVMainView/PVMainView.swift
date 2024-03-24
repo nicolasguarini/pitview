@@ -9,40 +9,68 @@ import SwiftUI
 
 struct PVMainView: View {
     @StateObject var viewModel = PVMainViewModel()
+    @State private var selectedIndex = 0
     
     var body: some View {
         NavigationView {
             ZStack {
                 VStack {
-                    Text("PitView").font(.f1FontBold(size: 24)).bold().padding()
+                    HStack(spacing: 1) {
+                        Text("Pit").font(.f1FontBold(size: 26))
+                        Text("View").font(.f1FontRegular(size: 26))
+                    }.padding()
+                    
+                    Picker(selection: $selectedIndex, label: Text("")) {
+                        Text("Drivers").tag(0)
+                        Text("Constructors").tag(1)
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .frame(width: 280)
+                    .padding()
+                    
+                    // Show different views based on selected index
+                    if selectedIndex == 0 {
+                        VStack {
+                            ForEach(viewModel.driverStandings.first(5), id: \.driver.code) { driverStanding in
+                                    Button(action: {
+                                        viewModel.selectedDriver = driverStanding.driver
+                                        viewModel.selectedConstructor = driverStanding.constructors[0]
+                                        viewModel.isShowingDriverDetails = true
+                                    }) {
+                                        HStack {
+                                            Text(driverStanding.position)
+                                            
+                                            Text(driverStanding.driver.givenName + " " + driverStanding.driver.familyName).font(Font.f1FontBold(size: 16))
+                                            
+                                            Spacer()
+                                            
+                                            Text(driverStanding.points + " pt")
+                                        }.font(Font.f1FontRegular(size: 16))
+                                            .padding()
+                                            .foregroundColor(.primary)
+                                    }
+                            }
+                        }
+                    } else {
+                        VStack {
+                            ForEach(viewModel.constructorStandings.first(5), id: \.constructor.constructorId) { constructorStanding in
+                                HStack {
+                                    Text(constructorStanding.position)
+                                    
+                                    Text(constructorStanding.constructor.name).font(.f1FontBold(size: 16))
+                                    
+                                    Spacer()
+                                    
+                                    Text(constructorStanding.points + " pt")
+                                }.font(Font.f1FontRegular(size: 16))
+                                    .padding()
+                                    .foregroundColor(.primary)
+                            }
+                        }
+                    }
+                    
                     
                     VStack {
-                        Text("Drivers").font(.f1FontItalic(size: 22))
-                        
-                        
-                        ForEach(viewModel.driverStandings.first(5), id: \.driver.code) { driverStanding in
-                                Button(action: {
-                                    viewModel.selectedDriver = driverStanding.driver
-                                    viewModel.selectedConstructor = driverStanding.constructors[0]
-                                    viewModel.isShowingDriverDetails = true
-                                }) {
-                                    HStack {
-                                        Text(driverStanding.position)
-                                        
-                                        Text(driverStanding.driver.givenName + " " + driverStanding.driver.familyName).font(Font.f1FontBold(size: 16))
-                                        
-                                        Spacer()
-                                        
-                                        Text(driverStanding.points + " pt")
-                                    }.font(Font.f1FontRegular(size: 16))
-                                        .padding()
-                                        .foregroundColor(.primary)
-                                    
-                                    
-                                }
-                            
-                        }
-                        
                         Spacer()
                         
                         List {

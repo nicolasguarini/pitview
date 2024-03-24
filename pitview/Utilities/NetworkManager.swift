@@ -46,8 +46,28 @@ final class NetworkManager {
         do {
             let decoder = JSONDecoder()
             let response = try decoder.decode(ErgastResponse.self, from: data)
-            let driverStandings = response.mrData.standingsTable!.standingsLists[0].driverStandings
+            let driverStandings = response.mrData.standingsTable!.standingsLists[0].driverStandings!
             return driverStandings
+        } catch {
+            print("Error decoding JSON: \(error.localizedDescription)")
+            throw PVError.invalidData
+        }
+    }
+    
+    func getConstructorStandings(season: String = "current") async throws -> [ConstructorStanding] {
+        let constructorStandingsURL = NetworkManager.baseURL + season + "/constructorStandings.json"
+        
+        guard let url = URL(string: constructorStandingsURL) else {
+            throw PVError.invalidURL
+        }
+        
+        let (data, _) = try await URLSession.shared.data(from: url)
+        
+        do {
+            let decoder = JSONDecoder()
+            let response = try decoder.decode(ErgastResponse.self, from: data)
+            let constructorStandings = response.mrData.standingsTable!.standingsLists[0].constructorStandings!
+            return constructorStandings
         } catch {
             print("Error decoding JSON: \(error.localizedDescription)")
             throw PVError.invalidData
