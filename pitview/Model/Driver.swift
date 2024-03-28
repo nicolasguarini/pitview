@@ -30,5 +30,3 @@ struct DriverStanding: Codable {
         case constructors = "Constructors"
     }
 }
-
-

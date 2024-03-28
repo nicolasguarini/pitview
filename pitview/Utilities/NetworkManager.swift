@@ -29,7 +29,7 @@ final class NetworkManager {
             let races = response.mrData.raceTable!.races
             return Season(season: season, races: races)
         } catch {
-            print("Error decoding JSON: \(error.localizedDescription)")
+            print("Error decoding JSON: \(error)")
             throw PVError.invalidData
         }
     }
@@ -49,7 +49,7 @@ final class NetworkManager {
             let driverStandings = response.mrData.standingsTable!.standingsLists[0].driverStandings!
             return driverStandings
         } catch {
-            print("Error decoding JSON: \(error.localizedDescription)")
+            print("Error decoding JSON: \(error)")
             throw PVError.invalidData
         }
     }
@@ -69,7 +69,29 @@ final class NetworkManager {
             let constructorStandings = response.mrData.standingsTable!.standingsLists[0].constructorStandings!
             return constructorStandings
         } catch {
-            print("Error decoding JSON: \(error.localizedDescription)")
+            print("Error decoding JSON: \(error)")
+            throw PVError.invalidData
+        }
+    }
+    
+    func getRaceReults(season: String = "current", round: String) async throws -> [DriverResult] {
+        let raceResultsURL = NetworkManager.baseURL + season + "/" + round + "/results.json"
+        
+        print(raceResultsURL)
+        
+        guard let url = URL(string: raceResultsURL) else {
+            throw PVError.invalidURL
+        }
+        
+        let (data, _) = try await URLSession.shared.data(from: url)
+        
+        do {
+            let decoder = JSONDecoder()
+            let response = try decoder.decode(ErgastResponse.self, from: data)
+            let raceResuts = response.mrData.raceTable?.races[0].results // TODO: index out of range se la gara non è stata corsa
+            return raceResuts!
+        } catch {
+            print("Error decoding JSON: \(error)")
             throw PVError.invalidData
         }
     }

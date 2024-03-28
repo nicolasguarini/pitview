@@ -28,6 +28,9 @@
 		932AEFDC2B9C74B500FB00BA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AEFDB2B9C74B500FB00BA /* Font.swift */; };
 		93394D902B8A5B8A003ABB24 /* PVTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93394D8F2B8A5B8A003ABB24 /* PVTabView.swift */; };
 		934C2E822BB6080E006726F4 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C2E812BB6080E006726F4 /* TimeUtils.swift */; };
+		934C2E842BB61008006726F4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C2E832BB61008006726F4 /* Result.swift */; };
+		934C2E862BB61154006726F4 /* PVRaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C2E852BB61154006726F4 /* PVRaceViewModel.swift */; };
+		934C2E892BB61AE7006726F4 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 934C2E882BB61AE7006726F4 /* SwiftUIX */; };
 		935265FB2B8A36A000580459 /* PitViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935265FA2B8A36A000580459 /* PitViewApp.swift */; };
 		935265FF2B8A36A200580459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935265FE2B8A36A200580459 /* Assets.xcassets */; };
 		935266022B8A36A200580459 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935266012B8A36A200580459 /* Preview Assets.xcassets */; };
@@ -72,6 +75,8 @@
 		932AEFDB2B9C74B500FB00BA /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		93394D8F2B8A5B8A003ABB24 /* PVTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTabView.swift; sourceTree = "<group>"; };
 		934C2E812BB6080E006726F4 /* TimeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
+		934C2E832BB61008006726F4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		934C2E852BB61154006726F4 /* PVRaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVRaceViewModel.swift; sourceTree = "<group>"; };
 		935265F72B8A36A000580459 /* PitView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		935265FA2B8A36A000580459 /* PitViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitViewApp.swift; sourceTree = "<group>"; };
 		935265FE2B8A36A200580459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				935BBAE32BA6548B00F23E8B /* FlagsKit in Frameworks */,
+				934C2E892BB61AE7006726F4 /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +155,7 @@
 				936B62082B95304400D0BB10 /* Circuit.swift */,
 				936B620A2B9531B600D0BB10 /* MockData.swift */,
 				936B620C2B95321900D0BB10 /* Location.swift */,
+				934C2E832BB61008006726F4 /* Result.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				936B62042B9522F500D0BB10 /* PVRaceView.swift */,
+				934C2E852BB61154006726F4 /* PVRaceViewModel.swift */,
 			);
 			path = PVRaceView;
 			sourceTree = "<group>";
@@ -321,6 +329,7 @@
 			name = PitView;
 			packageProductDependencies = (
 				935BBAE22BA6548B00F23E8B /* FlagsKit */,
+				934C2E882BB61AE7006726F4 /* SwiftUIX */,
 			);
 			productName = pitview;
 			productReference = 935265F72B8A36A000580459 /* PitView.app */;
@@ -352,6 +361,7 @@
 			mainGroup = 935265EE2B8A36A000580459;
 			packageReferences = (
 				935BBAE12BA6548B00F23E8B /* XCRemoteSwiftPackageReference "FlagsKit" */,
+				934C2E872BB61AE7006726F4 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 			);
 			productRefGroup = 935265F82B8A36A000580459 /* Products */;
 			projectDirPath = "";
@@ -408,11 +418,13 @@
 				936B62052B9522F500D0BB10 /* PVRaceView.swift in Sources */,
 				9319F6E32B8D52AA002842CD /* PVError.swift in Sources */,
 				932AEFDC2B9C74B500FB00BA /* Font.swift in Sources */,
+				934C2E842BB61008006726F4 /* Result.swift in Sources */,
 				936B62092B95304400D0BB10 /* Circuit.swift in Sources */,
 				935BBAE72BA66D4F00F23E8B /* Color.swift in Sources */,
 				9319F6ED2B8D6142002842CD /* RaceTable.swift in Sources */,
 				931B1B382B8FD8C300B13D99 /* Driver.swift in Sources */,
 				9319F6F12B8D63B0002842CD /* Alert.swift in Sources */,
+				934C2E862BB61154006726F4 /* PVRaceViewModel.swift in Sources */,
 				93E413092BACD1D4008B71F1 /* Array.swift in Sources */,
 				935265FB2B8A36A000580459 /* PitViewApp.swift in Sources */,
 			);
@@ -624,6 +636,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		934C2E872BB61AE7006726F4 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.9;
+			};
+		};
 		935BBAE12BA6548B00F23E8B /* XCRemoteSwiftPackageReference "FlagsKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pichukov/FlagsKit.git";
@@ -635,6 +655,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		934C2E882BB61AE7006726F4 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 934C2E872BB61AE7006726F4 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
 		935BBAE22BA6548B00F23E8B /* FlagsKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 935BBAE12BA6548B00F23E8B /* XCRemoteSwiftPackageReference "FlagsKit" */;
