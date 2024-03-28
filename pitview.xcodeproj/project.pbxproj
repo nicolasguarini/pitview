@@ -27,6 +27,7 @@
 		932AEFDA2B9C743600FB00BA /* Formula1-Bold_web.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 932AEFD42B9C743600FB00BA /* Formula1-Bold_web.ttf */; };
 		932AEFDC2B9C74B500FB00BA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AEFDB2B9C74B500FB00BA /* Font.swift */; };
 		93394D902B8A5B8A003ABB24 /* PVTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93394D8F2B8A5B8A003ABB24 /* PVTabView.swift */; };
+		934C2E822BB6080E006726F4 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C2E812BB6080E006726F4 /* TimeUtils.swift */; };
 		935265FB2B8A36A000580459 /* PitViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935265FA2B8A36A000580459 /* PitViewApp.swift */; };
 		935265FF2B8A36A200580459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935265FE2B8A36A200580459 /* Assets.xcassets */; };
 		935266022B8A36A200580459 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935266012B8A36A200580459 /* Preview Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		932AEFD42B9C743600FB00BA /* Formula1-Bold_web.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Bold_web.ttf"; sourceTree = "<group>"; };
 		932AEFDB2B9C74B500FB00BA /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		93394D8F2B8A5B8A003ABB24 /* PVTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTabView.swift; sourceTree = "<group>"; };
+		934C2E812BB6080E006726F4 /* TimeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
 		935265F72B8A36A000580459 /* PitView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		935265FA2B8A36A000580459 /* PitViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitViewApp.swift; sourceTree = "<group>"; };
 		935265FE2B8A36A200580459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				9319F6DC2B8D4E96002842CD /* NetworkManager.swift */,
 				935BBAE42BA656A100F23E8B /* CountryCodes.swift */,
 				935BBAE92BA6706000F23E8B /* TeamColorCodes.swift */,
+				934C2E812BB6080E006726F4 /* TimeUtils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				9319F6E02B8D4F63002842CD /* Season.swift in Sources */,
 				936184A42B90CF1600E3CF20 /* DriverDetailsView.swift in Sources */,
 				9319F6EB2B8D6130002842CD /* MRData.swift in Sources */,
+				934C2E822BB6080E006726F4 /* TimeUtils.swift in Sources */,
 				9319F6EF2B8D615B002842CD /* Race.swift in Sources */,
 				935BBAE52BA656A100F23E8B /* CountryCodes.swift in Sources */,
 				937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */,
