@@ -17,67 +17,75 @@ struct PVRaceView: View {
         NavigationView {
             ScrollView {
                 VStack(spacing: 25) {
-                    HStack{
-                        Image(race.circuit.circuitId)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 150)
-                        
-                        VStack {
-                            Text(race.circuit.circuitName)
-                                .font(.f1FontWide(size: 15))
-                                .padding()
-                            
-                            if let countryCode = CountryCodes.countryCode(for: race.circuit.location.country.lowercased()) {
-                                FlagView(countryCode: countryCode).frame(width: 22, height: 22)
-                            } else {
-                                Text(race.circuit.location.country).font(.f1FontBold(size: 18))
-                            }
-                            
-                        }
-                    }
-
-                    HStack(spacing: 25) {
-                        if let qualifying = race.qualifying {
-                            VStack(spacing: 7) {
-                                Text("Qualifying").font(.f1FontBold(size: 18)).padding(1)
-                                
-                                HStack {
-                                    Text(qualifying.date).font(.f1FontRegular(size: 16))
-                                    Text(TimeUtils.convertTime(qualifying.time) ?? qualifying.time).font(.f1FontRegular(size: 16))
-                                }
-                                
-                            }
-                        }
-                        
-                        if let time = race.time, let date = race.date {
-                            VStack(spacing: 7){
-                                Text("Race").font(.f1FontBold(size: 18)).padding(1)
-                                
-                                HStack {
-                                    Text(date).font(.f1FontRegular(size: 16))
-                                    Text(TimeUtils.convertTime(time) ?? time).font(.f1FontRegular(size: 16))
-                                }
-                            }
-                        }
-                    }.padding([.bottom], 20)
+                    PVRaceHeader(race: race).padding([.bottom], 10)
                     
                     ZStack {
                         VStack {
                             VStack {
-                                ForEach(viewModel.results, id: \.driver.driverId) { driverResult in
-                                    HStack {
-                                        Text(driverResult.position)
+                                if !viewModel.results.isEmpty {
+                                    ForEach(viewModel.results, id: \.driver.driverId) { driverResult in
+                                        HStack {
+                                            Text(driverResult.position)
+                                            
+                                            Text(driverResult.driver.givenName + " " + driverResult.driver.familyName)
+                                                .font(.f1FontBold(size: 16))
+                                            
+                                            Spacer()
+                                            
+                                            Text(driverResult.time?.time ?? "")
+                                        }.font(Font.f1FontRegular(size: 16))
+                                            .padding(10)
+                                            .foregroundColor(.primary)
+                                    }
+                                } else {
+                                    HStack(spacing: 15) {
                                         
-                                        Text(driverResult.driver.givenName + " " + driverResult.driver.familyName)
-                                            .font(.f1FontBold(size: 16))
+                                        if race.firstPractice != nil {
+                                            VStack {
+                                                Text("FP1")
+                                                    .font(.f1FontBold(size: 18))
+                                                    .padding(1)
+                                                
+                                                Text(race.firstPractice?.date ?? "").font(.f1FontRegular(size: 16))
+                                                Text(TimeUtils.convertTime(race.firstPractice?.time ?? "") ?? "").font(.f1FontRegular(size: 16))
+                                            }
+                                        }
                                         
-                                        Spacer()
+                                        if race.secondPractice != nil {
+                                            VStack {
+                                                Text("FP2")
+                                                    .font(.f1FontBold(size: 18))
+                                                    .padding(1)
+                                                
+                                                Text(race.secondPractice?.date ?? "").font(.f1FontRegular(size: 16))
+
+                                                Text(TimeUtils.convertTime(race.secondPractice?.time ?? "") ?? "").font(.f1FontRegular(size: 16))
+
+                                            }
+                                        }
                                         
-                                        Text(driverResult.time?.time ?? "")
-                                    }.font(Font.f1FontRegular(size: 16))
-                                        .padding(10)
-                                        .foregroundColor(.primary)
+                                        if race.thirdPractice != nil {
+                                            VStack {
+                                                Text("FP3")
+                                                    .font(.f1FontBold(size: 18))
+                                                    .padding(1)
+                                                
+                                                Text(race.thirdPractice?.date ?? "").font(.f1FontRegular(size: 16))
+                                                Text(TimeUtils.convertTime(race.thirdPractice?.time ?? "") ?? "").font(.f1FontRegular(size: 16))
+                                            }
+                                        }
+                                        
+                                        if race.sprint != nil {
+                                            VStack {
+                                                Text("Sprint")
+                                                    .font(.f1FontBold(size: 18))
+                                                    .padding(1)
+                                                
+                                                Text(race.sprint?.date ?? "").font(.f1FontRegular(size: 16))
+                                                Text(TimeUtils.convertTime(race.sprint?.time ?? "") ?? "").font(.f1FontRegular(size: 16))
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }.task {

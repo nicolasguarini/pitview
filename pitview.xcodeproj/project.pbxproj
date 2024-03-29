@@ -48,6 +48,8 @@
 		937C3FFA2B8A5F7C00AD50BA /* PVDriversView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */; };
 		937C3FFD2B8A5F9700AD50BA /* PVTracksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FFC2B8A5F9700AD50BA /* PVTracksView.swift */; };
 		937C40002B8A623900AD50BA /* PVSeasonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FFF2B8A623900AD50BA /* PVSeasonsView.swift */; };
+		93E10F7B2BB72405009B6EE1 /* PVSmallCircuitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E10F7A2BB72405009B6EE1 /* PVSmallCircuitCard.swift */; };
+		93E10F7D2BB72527009B6EE1 /* PVRaceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E10F7C2BB72527009B6EE1 /* PVRaceHeader.swift */; };
 		93E413092BACD1D4008B71F1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E413082BACD1D4008B71F1 /* Array.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +96,8 @@
 		937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVDriversView.swift; sourceTree = "<group>"; };
 		937C3FFC2B8A5F9700AD50BA /* PVTracksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTracksView.swift; sourceTree = "<group>"; };
 		937C3FFF2B8A623900AD50BA /* PVSeasonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVSeasonsView.swift; sourceTree = "<group>"; };
+		93E10F7A2BB72405009B6EE1 /* PVSmallCircuitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVSmallCircuitCard.swift; sourceTree = "<group>"; };
+		93E10F7C2BB72527009B6EE1 /* PVRaceHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVRaceHeader.swift; sourceTree = "<group>"; };
 		93E413082BACD1D4008B71F1 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,6 +206,8 @@
 			children = (
 				9319F6E72B8D5A08002842CD /* LoadingView.swift */,
 				936184A32B90CF1600E3CF20 /* DriverDetailsView.swift */,
+				93E10F7A2BB72405009B6EE1 /* PVSmallCircuitCard.swift */,
+				93E10F7C2BB72527009B6EE1 /* PVRaceHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				936184A42B90CF1600E3CF20 /* DriverDetailsView.swift in Sources */,
 				9319F6EB2B8D6130002842CD /* MRData.swift in Sources */,
 				934C2E822BB6080E006726F4 /* TimeUtils.swift in Sources */,
+				93E10F7D2BB72527009B6EE1 /* PVRaceHeader.swift in Sources */,
 				9319F6EF2B8D615B002842CD /* Race.swift in Sources */,
 				935BBAE52BA656A100F23E8B /* CountryCodes.swift in Sources */,
 				937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */,
@@ -421,6 +428,7 @@
 				934C2E842BB61008006726F4 /* Result.swift in Sources */,
 				936B62092B95304400D0BB10 /* Circuit.swift in Sources */,
 				935BBAE72BA66D4F00F23E8B /* Color.swift in Sources */,
+				93E10F7B2BB72405009B6EE1 /* PVSmallCircuitCard.swift in Sources */,
 				9319F6ED2B8D6142002842CD /* RaceTable.swift in Sources */,
 				931B1B382B8FD8C300B13D99 /* Driver.swift in Sources */,
 				9319F6F12B8D63B0002842CD /* Alert.swift in Sources */,

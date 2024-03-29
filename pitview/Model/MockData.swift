@@ -20,7 +20,7 @@ struct MockData {
         firstPractice: FirstPractice(date: "2024-03-01", time: "13:00:00Z"),
         secondPractice: SecondPractice(date: "2024-03-01", time: "16:00:00Z"),
         thirdPractice: ThirdPractice(date: "2024-03-02", time: "11:00:00Z"),
-        qualifying: Qualifying(date: "2024-03-02", time: "13:00:00Z"), results: nil)
+        qualifying: Qualifying(date: "2024-03-02", time: "13:00:00Z"), sprint: Sprint(date: "2024-03-02", time: "12:00:00Z"), results: nil)
     static let mockSeason = Season(season: "2024", races: [mockRace])
     static let mockDriverStanding = DriverStanding(position: "1", points: "26", driver: mockDriver, constructors: [mockConstructor])
     static let mockConstructorStanding = ConstructorStanding(position: "1", points: "10", wins: "1", constructor: mockConstructor)

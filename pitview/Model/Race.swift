@@ -18,6 +18,7 @@ struct Race: Codable {
     let secondPractice: SecondPractice?
     let thirdPractice: ThirdPractice?
     let qualifying: Qualifying?
+    let sprint: Sprint?
     let results: [DriverResult]?
     
     private enum CodingKeys: String, CodingKey {
@@ -31,6 +32,7 @@ struct Race: Codable {
         case secondPractice = "SecondPractice"
         case thirdPractice = "ThirdPractice"
         case qualifying = "Qualifying"
+        case sprint = "Sprint"
         case results = "Results"
     }
 }
@@ -51,6 +53,11 @@ struct ThirdPractice: Codable {
 }
 
 struct Qualifying: Codable {
+    let date: String
+    let time: String
+}
+
+struct Sprint: Codable {
     let date: String
     let time: String
 }

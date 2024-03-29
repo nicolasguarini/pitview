@@ -88,7 +88,13 @@ final class NetworkManager {
         do {
             let decoder = JSONDecoder()
             let response = try decoder.decode(ErgastResponse.self, from: data)
-            let raceResuts = response.mrData.raceTable?.races[0].results // TODO: index out of range se la gara non è stata corsa
+            let races = response.mrData.raceTable?.races
+            
+            if races!.isEmpty {
+               return []
+            }
+            
+            let raceResuts = races![0].results
             return raceResuts!
         } catch {
             print("Error decoding JSON: \(error)")
