@@ -23,6 +23,23 @@ struct PVRaceView: View {
                         VStack {
                             VStack {
                                 if !viewModel.results.isEmpty {
+                                    HStack(spacing: 40) {
+                                        if let laps = RaceUtils.calculateMaxLaps(driverResults: viewModel.results) {
+                                            HStack {
+                                                Text(String(laps)).font(.f1FontBold(size: 28))
+                                                Text("LAPS").font(.f1FontRegular(size: 18))
+                                            }
+                                            
+                                        }
+                                        
+                                        if let averageSpeed = RaceUtils.calculateAverageSpeed(driverResults: viewModel.results) {
+                                            VStack(spacing: 7) {
+                                                Text("Avg. Speed").font(.f1FontRegular(size: 16))
+                                                Text(String(averageSpeed) + " kph").font(.f1FontBold(size: 24))
+                                            }
+                                        }
+                                    }.padding([.bottom], 20)
+                                    
                                     ForEach(viewModel.results, id: \.driver.driverId) { driverResult in
                                         PVSimpleListItemView(
                                             left: driverResult.position,
@@ -68,6 +85,13 @@ struct PVRaceView: View {
                                             )
                                         }
                                     }
+                                    
+                                    Button(action: {}, label: {
+                                        HStack {
+                                            Image(systemName: "bell")
+                                            Text("Set Reminder")
+                                        }
+                                    }).buttonStyle(.bordered).padding([.all], 30)
                                 }
                             }
                         }.task {

@@ -40,10 +40,17 @@ struct FastestLap: Codable {
     let rank: String
     let lap: String
     let time: Time?
+    let averageSpeed: AverageSpeed?
     
     private enum CodingKeys: String, CodingKey {
         case rank
         case lap
         case time = "Time"
+        case averageSpeed = "AverageSpeed"
     }
+}
+
+struct AverageSpeed: Codable {
+    let units: String
+    let speed: String
 }

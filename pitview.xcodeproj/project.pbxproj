@@ -46,6 +46,7 @@
 		9372DA5A2BB74E860005C63F /* PVSessionTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372DA592BB74E860005C63F /* PVSessionTimeView.swift */; };
 		9372DA5C2BB756960005C63F /* PVSimpleListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372DA5B2BB756960005C63F /* PVSimpleListItemView.swift */; };
 		9372DA5E2BB758F00005C63F /* PVAppHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372DA5D2BB758F00005C63F /* PVAppHeader.swift */; };
+		9372DA602BB75EF80005C63F /* RaceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372DA5F2BB75EF80005C63F /* RaceUtils.swift */; };
 		937C3FF42B8A5CF100AD50BA /* PVAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF32B8A5CF100AD50BA /* PVAboutView.swift */; };
 		937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF62B8A5EC700AD50BA /* PVMainView.swift */; };
 		937C3FFA2B8A5F7C00AD50BA /* PVDriversView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */; };
@@ -97,6 +98,7 @@
 		9372DA592BB74E860005C63F /* PVSessionTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVSessionTimeView.swift; sourceTree = "<group>"; };
 		9372DA5B2BB756960005C63F /* PVSimpleListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVSimpleListItemView.swift; sourceTree = "<group>"; };
 		9372DA5D2BB758F00005C63F /* PVAppHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVAppHeader.swift; sourceTree = "<group>"; };
+		9372DA5F2BB75EF80005C63F /* RaceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceUtils.swift; sourceTree = "<group>"; };
 		937C3FF32B8A5CF100AD50BA /* PVAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVAboutView.swift; sourceTree = "<group>"; };
 		937C3FF62B8A5EC700AD50BA /* PVMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVMainView.swift; sourceTree = "<group>"; };
 		937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVDriversView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				935BBAE42BA656A100F23E8B /* CountryCodes.swift */,
 				935BBAE92BA6706000F23E8B /* TeamColorCodes.swift */,
 				934C2E812BB6080E006726F4 /* TimeUtils.swift */,
+				9372DA5F2BB75EF80005C63F /* RaceUtils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */,
 				931B1B3A2B8FD90000B13D99 /* StandingsTable.swift in Sources */,
 				937C3FFD2B8A5F9700AD50BA /* PVTracksView.swift in Sources */,
+				9372DA602BB75EF80005C63F /* RaceUtils.swift in Sources */,
 				936B620D2B95321900D0BB10 /* Location.swift in Sources */,
 				935BBAEA2BA6706000F23E8B /* TeamColorCodes.swift in Sources */,
 				9319F6E82B8D5A08002842CD /* LoadingView.swift in Sources */,

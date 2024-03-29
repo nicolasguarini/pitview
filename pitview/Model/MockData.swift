@@ -25,6 +25,6 @@ struct MockData {
     static let mockDriverStanding = DriverStanding(position: "1", points: "26", driver: mockDriver, constructors: [mockConstructor])
     static let mockConstructorStanding = ConstructorStanding(position: "1", points: "10", wins: "1", constructor: mockConstructor)
     static let mockTime = Time(millis: "23423423", time: "1:18:203")
-    static let mockFastestLap = FastestLap(rank: "1", lap: "56", time: mockTime)
+    static let mockFastestLap = FastestLap(rank: "1", lap: "56", time: mockTime, averageSpeed: AverageSpeed(units: "kph", speed: "237.762"))
     static let mockDriverResult = DriverResult(position: "1", points: "25", driver: mockDriver, constructor: mockConstructor, grid: "4", laps: "58", status: "Finished", time: mockTime, fastestLap: mockFastestLap)
 }
