@@ -16,26 +16,21 @@ struct PVRaceHeader: View {
             
             HStack(spacing: 25) {
                 if let qualifying = race.qualifying {
-                    VStack(spacing: 7) {
-                        Text("Qualifying").font(.f1FontBold(size: 18)).padding(1)
-                        
-                        HStack {
-                            Text(qualifying.date).font(.f1FontRegular(size: 16))
-                            Text(TimeUtils.convertTime(qualifying.time) ?? qualifying.time).font(.f1FontRegular(size: 16))
-                        }
-                        
-                    }
+                    PVSessionTimeView(
+                        sessionName: "Qualifying",
+                        compact: false,
+                        date: qualifying.date, 
+                        time: qualifying.time
+                    )
                 }
                 
                 if let time = race.time, let date = race.date {
-                    VStack(spacing: 7){
-                        Text("Race").font(.f1FontBold(size: 18)).padding(1)
-                        
-                        HStack {
-                            Text(date).font(.f1FontRegular(size: 16))
-                            Text(TimeUtils.convertTime(time) ?? time).font(.f1FontRegular(size: 16))
-                        }
-                    }
+                    PVSessionTimeView(
+                        sessionName: "Race",
+                        compact: false,
+                        date: date,
+                        time: time
+                    )
                 }
             }
         }

@@ -43,6 +43,9 @@
 		936B62092B95304400D0BB10 /* Circuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936B62082B95304400D0BB10 /* Circuit.swift */; };
 		936B620B2B9531B600D0BB10 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936B620A2B9531B600D0BB10 /* MockData.swift */; };
 		936B620D2B95321900D0BB10 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936B620C2B95321900D0BB10 /* Location.swift */; };
+		9372DA5A2BB74E860005C63F /* PVSessionTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372DA592BB74E860005C63F /* PVSessionTimeView.swift */; };
+		9372DA5C2BB756960005C63F /* PVSimpleListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372DA5B2BB756960005C63F /* PVSimpleListItemView.swift */; };
+		9372DA5E2BB758F00005C63F /* PVAppHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372DA5D2BB758F00005C63F /* PVAppHeader.swift */; };
 		937C3FF42B8A5CF100AD50BA /* PVAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF32B8A5CF100AD50BA /* PVAboutView.swift */; };
 		937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF62B8A5EC700AD50BA /* PVMainView.swift */; };
 		937C3FFA2B8A5F7C00AD50BA /* PVDriversView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */; };
@@ -91,6 +94,9 @@
 		936B62082B95304400D0BB10 /* Circuit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circuit.swift; sourceTree = "<group>"; };
 		936B620A2B9531B600D0BB10 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		936B620C2B95321900D0BB10 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		9372DA592BB74E860005C63F /* PVSessionTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVSessionTimeView.swift; sourceTree = "<group>"; };
+		9372DA5B2BB756960005C63F /* PVSimpleListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVSimpleListItemView.swift; sourceTree = "<group>"; };
+		9372DA5D2BB758F00005C63F /* PVAppHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVAppHeader.swift; sourceTree = "<group>"; };
 		937C3FF32B8A5CF100AD50BA /* PVAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVAboutView.swift; sourceTree = "<group>"; };
 		937C3FF62B8A5EC700AD50BA /* PVMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVMainView.swift; sourceTree = "<group>"; };
 		937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVDriversView.swift; sourceTree = "<group>"; };
@@ -208,6 +214,9 @@
 				936184A32B90CF1600E3CF20 /* DriverDetailsView.swift */,
 				93E10F7A2BB72405009B6EE1 /* PVSmallCircuitCard.swift */,
 				93E10F7C2BB72527009B6EE1 /* PVRaceHeader.swift */,
+				9372DA592BB74E860005C63F /* PVSessionTimeView.swift */,
+				9372DA5B2BB756960005C63F /* PVSimpleListItemView.swift */,
+				9372DA5D2BB758F00005C63F /* PVAppHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -405,12 +414,15 @@
 				9319F6E52B8D5457002842CD /* PVMainViewModel.swift in Sources */,
 				936B620B2B9531B600D0BB10 /* MockData.swift in Sources */,
 				9319F6E02B8D4F63002842CD /* Season.swift in Sources */,
+				9372DA5C2BB756960005C63F /* PVSimpleListItemView.swift in Sources */,
 				936184A42B90CF1600E3CF20 /* DriverDetailsView.swift in Sources */,
 				9319F6EB2B8D6130002842CD /* MRData.swift in Sources */,
+				9372DA5E2BB758F00005C63F /* PVAppHeader.swift in Sources */,
 				934C2E822BB6080E006726F4 /* TimeUtils.swift in Sources */,
 				93E10F7D2BB72527009B6EE1 /* PVRaceHeader.swift in Sources */,
 				9319F6EF2B8D615B002842CD /* Race.swift in Sources */,
 				935BBAE52BA656A100F23E8B /* CountryCodes.swift in Sources */,
+				9372DA5A2BB74E860005C63F /* PVSessionTimeView.swift in Sources */,
 				937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */,
 				931B1B3A2B8FD90000B13D99 /* StandingsTable.swift in Sources */,
 				937C3FFD2B8A5F9700AD50BA /* PVTracksView.swift in Sources */,

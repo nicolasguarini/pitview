@@ -15,10 +15,7 @@ struct PVMainView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    HStack(spacing: 1) {
-                        Text("Pit").font(.f1FontBold(size: 26))
-                        Text("View").font(.f1FontRegular(size: 26))
-                    }.padding()
+                    PVAppHeader()
                     
                     Picker(selection: $selectedIndex, label: Text("")) {
                         Text("Drivers").tag(0)
@@ -28,7 +25,6 @@ struct PVMainView: View {
                     .frame(width: 280)
                     .padding()
                     
-                    // Show different views based on selected index
                     if selectedIndex == 0 {
                         VStack {
                             ForEach(viewModel.driverStandings.first(5), id: \.driver.code) { driverStanding in
@@ -37,34 +33,20 @@ struct PVMainView: View {
                                         viewModel.selectedConstructor = driverStanding.constructors[0]
                                         viewModel.isShowingDriverDetails = true
                                     }) {
-                                        HStack {
-                                            Text(driverStanding.position)
-                                            
-                                            Text(driverStanding.driver.givenName + " " + driverStanding.driver.familyName).font(Font.f1FontBold(size: 16))
-                                            
-                                            Spacer()
-                                            
-                                            Text(driverStanding.points + " pt")
-                                        }.font(Font.f1FontRegular(size: 16))
-                                            .padding()
-                                            .foregroundColor(.primary)
-                                    }
+                                        PVSimpleListItemView(left: driverStanding.position,
+                                                             main: driverStanding.driver.givenName + " " + driverStanding.driver.familyName,
+                                                             right: driverStanding.points + " pt."
+                                        ).padding()
+                                    }.foregroundColor(.primary)
                             }
                         }
                     } else {
                         VStack {
                             ForEach(viewModel.constructorStandings.first(5), id: \.constructor.constructorId) { constructorStanding in
-                                HStack {
-                                    Text(constructorStanding.position)
-                                    
-                                    Text(constructorStanding.constructor.name).font(.f1FontBold(size: 16))
-                                    
-                                    Spacer()
-                                    
-                                    Text(constructorStanding.points + " pt")
-                                }.font(Font.f1FontRegular(size: 16))
-                                    .padding()
-                                    .foregroundColor(.primary)
+                                PVSimpleListItemView(left: constructorStanding.position,
+                                                     main: constructorStanding.constructor.name,
+                                                     right: constructorStanding.points + " pt."
+                                ).padding()
                             }
                         }
                     }

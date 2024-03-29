@@ -24,66 +24,48 @@ struct PVRaceView: View {
                             VStack {
                                 if !viewModel.results.isEmpty {
                                     ForEach(viewModel.results, id: \.driver.driverId) { driverResult in
-                                        HStack {
-                                            Text(driverResult.position)
-                                            
-                                            Text(driverResult.driver.givenName + " " + driverResult.driver.familyName)
-                                                .font(.f1FontBold(size: 16))
-                                            
-                                            Spacer()
-                                            
-                                            Text(driverResult.time?.time ?? "")
-                                        }.font(Font.f1FontRegular(size: 16))
-                                            .padding(10)
-                                            .foregroundColor(.primary)
+                                        PVSimpleListItemView(
+                                            left: driverResult.position,
+                                            main: driverResult.driver.givenName + " " + driverResult.driver.familyName,
+                                            right: driverResult.time?.time ?? ""
+                                        ).padding(10)
                                     }
                                 } else {
                                     HStack(spacing: 15) {
-                                        
-                                        if race.firstPractice != nil {
-                                            VStack {
-                                                Text("FP1")
-                                                    .font(.f1FontBold(size: 18))
-                                                    .padding(1)
-                                                
-                                                Text(race.firstPractice?.date ?? "").font(.f1FontRegular(size: 16))
-                                                Text(TimeUtils.convertTime(race.firstPractice?.time ?? "") ?? "").font(.f1FontRegular(size: 16))
-                                            }
+                                        if let fp1 = race.firstPractice {
+                                            PVSessionTimeView(
+                                                sessionName: "FP1",
+                                                compact: true,
+                                                date: fp1.date,
+                                                time: fp1.time
+                                            )
                                         }
                                         
-                                        if race.secondPractice != nil {
-                                            VStack {
-                                                Text("FP2")
-                                                    .font(.f1FontBold(size: 18))
-                                                    .padding(1)
-                                                
-                                                Text(race.secondPractice?.date ?? "").font(.f1FontRegular(size: 16))
-
-                                                Text(TimeUtils.convertTime(race.secondPractice?.time ?? "") ?? "").font(.f1FontRegular(size: 16))
-
-                                            }
+                                        if let fp2 = race.secondPractice {
+                                            PVSessionTimeView(
+                                                sessionName: "FP2",
+                                                compact: true,
+                                                date: fp2.date,
+                                                time: fp2.time
+                                            )
                                         }
                                         
-                                        if race.thirdPractice != nil {
-                                            VStack {
-                                                Text("FP3")
-                                                    .font(.f1FontBold(size: 18))
-                                                    .padding(1)
-                                                
-                                                Text(race.thirdPractice?.date ?? "").font(.f1FontRegular(size: 16))
-                                                Text(TimeUtils.convertTime(race.thirdPractice?.time ?? "") ?? "").font(.f1FontRegular(size: 16))
-                                            }
+                                        if let fp3 = race.thirdPractice {
+                                            PVSessionTimeView(
+                                                sessionName: "FP3",
+                                                compact: true,
+                                                date: fp3.date,
+                                                time: fp3.time
+                                            )
                                         }
                                         
-                                        if race.sprint != nil {
-                                            VStack {
-                                                Text("Sprint")
-                                                    .font(.f1FontBold(size: 18))
-                                                    .padding(1)
-                                                
-                                                Text(race.sprint?.date ?? "").font(.f1FontRegular(size: 16))
-                                                Text(TimeUtils.convertTime(race.sprint?.time ?? "") ?? "").font(.f1FontRegular(size: 16))
-                                            }
+                                        if let sprint = race.sprint {
+                                            PVSessionTimeView(
+                                                sessionName: "Sprint",
+                                                compact: true,
+                                                date: sprint.date,
+                                                time: sprint.time
+                                            )
                                         }
                                     }
                                 }
