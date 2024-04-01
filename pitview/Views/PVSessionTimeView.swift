@@ -14,26 +14,41 @@ struct PVSessionTimeView: View {
     let time: String?
     
     var body: some View {
-        VStack(spacing: 7) {
-            Text(sessionName).font(.f1FontBold(size: 18)).padding(1)
-            
-            if compact {
-                VStack {
+        if compact {
+            VStack(spacing: 10) {
+                Text(sessionName).font(.f1FontBold(size: 18)).padding(1)
+                
+                HStack {
                     Text(date).font(.f1FontRegular(size: 16))
                     
                     if let time = time  {
                         Text(TimeUtils.convertTime(time) ?? time).font(.f1FontRegular(size: 16))
                     }
                 }
-            } else {
-                HStack(spacing: 10) {
-                    Text(date).font(.f1FontRegular(size: 16))
-                    
-                    if let time = time  {
-                        Text(TimeUtils.convertTime(time) ?? time).font(.f1FontRegular(size: 16))
-                    }
-                }
+                
             }
+        } else {
+            HStack {
+                VStack(alignment: .leading, spacing: 20) {
+                    Text(sessionName).font(.f1FontBold(size: 18)).padding(1)
+                    
+                    HStack(spacing: 10) {
+                        Text(DateUtils.formatDate(date)).font(.f1FontRegular(size: 16))
+                        
+                        if let time = time  {
+                            Text(TimeUtils.convertTime(time) ?? time).font(.f1FontRegular(size: 16))
+                        }
+                    }
+                }
+                
+                Spacer()
+                
+                Button(action: {
+                    
+                }, label: Image(systemName: "bell")).tint(.hotRed)
+            }
+            .padding([.all], 20).frame(maxWidth: .infinity, alignment: .leading).background(.secondarySystemBackground)
+            
         }
     }
 }

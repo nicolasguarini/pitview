@@ -23,36 +23,15 @@ struct PVRaceView: View {
                         VStack {
                             VStack {
                                 if !viewModel.results.isEmpty {
-                                    HStack(spacing: 40) {
-                                        if let laps = RaceUtils.calculateMaxLaps(driverResults: viewModel.results) {
-                                            HStack {
-                                                Text(String(laps)).font(.f1FontBold(size: 28))
-                                                Text("LAPS").font(.f1FontRegular(size: 18))
-                                            }
-                                            
-                                        }
-                                        
-                                        if let averageSpeed = RaceUtils.calculateAverageSpeed(driverResults: viewModel.results) {
-                                            VStack(spacing: 7) {
-                                                Text("Avg. Speed").font(.f1FontRegular(size: 16))
-                                                Text(String(averageSpeed) + " kph").font(.f1FontBold(size: 24))
-                                            }
-                                        }
-                                    }.padding([.bottom], 20)
-                                    
-                                    ForEach(viewModel.results, id: \.driver.driverId) { driverResult in
-                                        PVSimpleListItemView(
-                                            left: driverResult.position,
-                                            main: driverResult.driver.givenName + " " + driverResult.driver.familyName,
-                                            right: driverResult.time?.time ?? ""
-                                        ).padding(10)
-                                    }
+                                    PVBasicRaceStatsView(results: viewModel.results)
+                                        .padding([.bottom], 20)
+                                    PVRaceResultsListView(results: viewModel.results)
                                 } else {
-                                    HStack(spacing: 15) {
+                                    VStack(spacing: 15) {
                                         if let fp1 = race.firstPractice {
                                             PVSessionTimeView(
-                                                sessionName: "FP1",
-                                                compact: true,
+                                                sessionName: "Free Practice 1",
+                                                compact: false,
                                                 date: fp1.date,
                                                 time: fp1.time
                                             )
@@ -60,8 +39,8 @@ struct PVRaceView: View {
                                         
                                         if let fp2 = race.secondPractice {
                                             PVSessionTimeView(
-                                                sessionName: "FP2",
-                                                compact: true,
+                                                sessionName: "Free Practice 2",
+                                                compact: false,
                                                 date: fp2.date,
                                                 time: fp2.time
                                             )
@@ -69,8 +48,8 @@ struct PVRaceView: View {
                                         
                                         if let fp3 = race.thirdPractice {
                                             PVSessionTimeView(
-                                                sessionName: "FP3",
-                                                compact: true,
+                                                sessionName: "Free Practice 3",
+                                                compact: false,
                                                 date: fp3.date,
                                                 time: fp3.time
                                             )
@@ -78,20 +57,27 @@ struct PVRaceView: View {
                                         
                                         if let sprint = race.sprint {
                                             PVSessionTimeView(
-                                                sessionName: "Sprint",
-                                                compact: true,
+                                                sessionName: "Sprint Race",
+                                                compact: false,
                                                 date: sprint.date,
                                                 time: sprint.time
                                             )
                                         }
-                                    }
-                                    
-                                    Button(action: {}, label: {
-                                        HStack {
-                                            Image(systemName: "bell")
-                                            Text("Set Reminder")
+                                        
+                                        if let qualifying = race.qualifying {
+                                            PVSessionTimeView(
+                                                sessionName: "Qualifying",
+                                                compact: false,
+                                                date: DateUtils.formatDate(qualifying.date),
+                                                time: qualifying.time
+                                            )
                                         }
-                                    }).buttonStyle(.bordered).padding([.all], 30)
+                                        
+                                        if let date = race.date, let time = race.time {
+                                            PVSessionTimeView(sessionName: "Race", compact: false, date: DateUtils.formatDate(date), time: time)
+                                        }
+                                        
+                                    }
                                 }
                             }
                         }.task {
@@ -102,7 +88,6 @@ struct PVRaceView: View {
                             LoadingView()
                         }
                     }
-                    
                     
                     Spacer()
                 }

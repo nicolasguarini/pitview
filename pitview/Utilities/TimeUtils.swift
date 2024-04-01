@@ -10,13 +10,13 @@ import Foundation
 class TimeUtils {
     static func convertTime(_ timeString: String) -> String? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm:ssZ" // Formato di input
+        dateFormatter.dateFormat = "HH:mm:ssZ"
         
         guard let date = dateFormatter.date(from: timeString) else {
-            return nil // Errore nel parsing della data
+            return nil
         }
         
-        dateFormatter.dateFormat = "HH:mm" // Formato di output senza indicazione AM/PM
+        dateFormatter.dateFormat = "HH:mm"
         return dateFormatter.string(from: date)
     }
 }

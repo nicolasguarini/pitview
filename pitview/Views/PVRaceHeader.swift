@@ -14,24 +14,30 @@ struct PVRaceHeader: View {
         VStack(spacing: 25) {
             PVSmallCircuitCard(circuit: race.circuit)
             
-            HStack(spacing: 25) {
+            HStack() {
+                Spacer()
+                
                 if let qualifying = race.qualifying {
                     PVSessionTimeView(
                         sessionName: "Qualifying",
-                        compact: false,
-                        date: qualifying.date, 
+                        compact: true,
+                        date: DateUtils.formatDate(qualifying.date),
                         time: qualifying.time
                     )
                 }
                 
+                Spacer()
+                
                 if let time = race.time, let date = race.date {
                     PVSessionTimeView(
                         sessionName: "Race",
-                        compact: false,
-                        date: date,
+                        compact: true,
+                        date: DateUtils.formatDate(date),
                         time: time
                     )
-                }
+                } 
+                
+                Spacer()
             }
         }
     }

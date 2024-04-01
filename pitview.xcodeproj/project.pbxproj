@@ -52,6 +52,9 @@
 		937C3FFA2B8A5F7C00AD50BA /* PVDriversView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */; };
 		937C3FFD2B8A5F9700AD50BA /* PVTracksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FFC2B8A5F9700AD50BA /* PVTracksView.swift */; };
 		937C40002B8A623900AD50BA /* PVSeasonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FFF2B8A623900AD50BA /* PVSeasonsView.swift */; };
+		93BDC7172BBB62DE004EA7C1 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BDC7162BBB62DE004EA7C1 /* DateUtils.swift */; };
+		93BDC7192BBB677B004EA7C1 /* PVBasicRaceStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BDC7182BBB677B004EA7C1 /* PVBasicRaceStatsView.swift */; };
+		93BDC71B2BBB683A004EA7C1 /* PVRaceResultsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BDC71A2BBB683A004EA7C1 /* PVRaceResultsListView.swift */; };
 		93E10F7B2BB72405009B6EE1 /* PVSmallCircuitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E10F7A2BB72405009B6EE1 /* PVSmallCircuitCard.swift */; };
 		93E10F7D2BB72527009B6EE1 /* PVRaceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E10F7C2BB72527009B6EE1 /* PVRaceHeader.swift */; };
 		93E413092BACD1D4008B71F1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E413082BACD1D4008B71F1 /* Array.swift */; };
@@ -104,6 +107,9 @@
 		937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVDriversView.swift; sourceTree = "<group>"; };
 		937C3FFC2B8A5F9700AD50BA /* PVTracksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTracksView.swift; sourceTree = "<group>"; };
 		937C3FFF2B8A623900AD50BA /* PVSeasonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVSeasonsView.swift; sourceTree = "<group>"; };
+		93BDC7162BBB62DE004EA7C1 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		93BDC7182BBB677B004EA7C1 /* PVBasicRaceStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVBasicRaceStatsView.swift; sourceTree = "<group>"; };
+		93BDC71A2BBB683A004EA7C1 /* PVRaceResultsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVRaceResultsListView.swift; sourceTree = "<group>"; };
 		93E10F7A2BB72405009B6EE1 /* PVSmallCircuitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVSmallCircuitCard.swift; sourceTree = "<group>"; };
 		93E10F7C2BB72527009B6EE1 /* PVRaceHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVRaceHeader.swift; sourceTree = "<group>"; };
 		93E413082BACD1D4008B71F1 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
@@ -153,6 +159,7 @@
 				935BBAE92BA6706000F23E8B /* TeamColorCodes.swift */,
 				934C2E812BB6080E006726F4 /* TimeUtils.swift */,
 				9372DA5F2BB75EF80005C63F /* RaceUtils.swift */,
+				93BDC7162BBB62DE004EA7C1 /* DateUtils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -220,6 +227,8 @@
 				9372DA592BB74E860005C63F /* PVSessionTimeView.swift */,
 				9372DA5B2BB756960005C63F /* PVSimpleListItemView.swift */,
 				9372DA5D2BB758F00005C63F /* PVAppHeader.swift */,
+				93BDC7182BBB677B004EA7C1 /* PVBasicRaceStatsView.swift */,
+				93BDC71A2BBB683A004EA7C1 /* PVRaceResultsListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -415,6 +424,7 @@
 			files = (
 				93394D902B8A5B8A003ABB24 /* PVTabView.swift in Sources */,
 				9319F6E52B8D5457002842CD /* PVMainViewModel.swift in Sources */,
+				93BDC7192BBB677B004EA7C1 /* PVBasicRaceStatsView.swift in Sources */,
 				936B620B2B9531B600D0BB10 /* MockData.swift in Sources */,
 				9319F6E02B8D4F63002842CD /* Season.swift in Sources */,
 				9372DA5C2BB756960005C63F /* PVSimpleListItemView.swift in Sources */,
@@ -429,6 +439,7 @@
 				937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */,
 				931B1B3A2B8FD90000B13D99 /* StandingsTable.swift in Sources */,
 				937C3FFD2B8A5F9700AD50BA /* PVTracksView.swift in Sources */,
+				93BDC7172BBB62DE004EA7C1 /* DateUtils.swift in Sources */,
 				9372DA602BB75EF80005C63F /* RaceUtils.swift in Sources */,
 				936B620D2B95321900D0BB10 /* Location.swift in Sources */,
 				935BBAEA2BA6706000F23E8B /* TeamColorCodes.swift in Sources */,
@@ -444,6 +455,7 @@
 				934C2E842BB61008006726F4 /* Result.swift in Sources */,
 				936B62092B95304400D0BB10 /* Circuit.swift in Sources */,
 				935BBAE72BA66D4F00F23E8B /* Color.swift in Sources */,
+				93BDC71B2BBB683A004EA7C1 /* PVRaceResultsListView.swift in Sources */,
 				93E10F7B2BB72405009B6EE1 /* PVSmallCircuitCard.swift in Sources */,
 				9319F6ED2B8D6142002842CD /* RaceTable.swift in Sources */,
 				931B1B382B8FD8C300B13D99 /* Driver.swift in Sources */,
