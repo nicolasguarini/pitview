@@ -22,11 +22,15 @@ struct DriverStanding: Codable {
     let points: String
     let driver: Driver
     let constructors: [Constructor]
+    let status: String?
+    let grid: String?
     
     private enum CodingKeys: String, CodingKey {
         case position
         case points
         case driver = "Driver"
         case constructors = "Constructors"
+        case status
+        case grid
     }
 }

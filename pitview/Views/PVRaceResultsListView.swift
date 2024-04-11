@@ -22,10 +22,34 @@ struct PVRaceResultsListView: View {
           if driverResult.fastestLap?.rank == "1" {
             Image(systemName: "timer.circle.fill").foregroundStyle(.purple)
           }
+            
+            let startPosition: Int = Int(driverResult.grid) ?? 0
+            let endPosition: Int = Int(driverResult.position) ?? 0
+
+            let deltaPosition: Int = endPosition - startPosition
+
+            if deltaPosition < 0 {
+                HStack(spacing: 1) {
+                    Image(systemName: "chevron.up")
+                    Text(String(abs(deltaPosition)))
+                }.foregroundStyle(.green).font(.f1FontRegular(size: 14))
+            } else if deltaPosition > 0 {
+                HStack(spacing: 1) {
+                    Image(systemName: "chevron.down")
+                    Text(String(deltaPosition))
+                }.foregroundStyle(.red).font(.f1FontRegular(size: 14))
+            }
 
           Spacer()
-
-          Text(driverResult.time?.time ?? "")
+            
+            if driverResult.time != nil, driverResult.status == "Finished" {
+                Text(driverResult.time!.time)
+            } else if driverResult.status.contains("+") {
+                Text(driverResult.status)
+            } else {
+                Text("DNF (" + driverResult.status + ")")
+            }
+          
         }.font(Font.f1FontRegular(size: 16)).padding(10)
           .overlay(
             Rectangle().frame(width: 2, height: nil, alignment: .leading).foregroundColor(
