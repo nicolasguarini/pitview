@@ -36,4 +36,25 @@ class RaceUtils {
         
         return maxLaps
     }
+    
+    static func getRaceDateTime(race: Race) -> Date? {
+        let dateTimeString = "\(race.date ?? "")T\(race.time ?? "")"
+        let dateFormatter = ISO8601DateFormatter()
+        
+        return dateFormatter.date(from: dateTimeString)
+    }
+    
+    static func isRaceCompleted(_ race: Race) -> Bool {
+        if race.date == nil || race.time == nil {
+            return false
+        }
+        
+        guard let raceDate = getRaceDateTime(race: race) else { return false }
+        return raceDate < Date()
+    }
+    
+    static func getLastCompletedRace(from races: [Race]) -> Race? {
+        let completedRaces = races.filter { RaceUtils.isRaceCompleted($0) }
+        return completedRaces.max { RaceUtils.getRaceDateTime(race: $0)! < RaceUtils.getRaceDateTime(race: $1)! }
+    }
 }

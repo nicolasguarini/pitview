@@ -14,13 +14,13 @@ struct PVTabView: View {
                 .tabItem { Label("Home", systemImage: "house") }
             
             PVSeasonsView()
-                .tabItem { Label("Seasons", systemImage: "trophy") }
+                .tabItem { Label("Standings", systemImage: "chart.bar.fill") }
             
             PVDriversView()
-                .tabItem { Label("Drivers", systemImage: "steeringwheel") }
+                .tabItem { Label("Events", systemImage: "calendar") }
             
             PVTracksView()
-                .tabItem { Label("Tracks", systemImage: "road.lanes.curved.right") }
+                .tabItem { Label("Settings", systemImage: "gear") }
         }.tint(.hotRed)
     }
 }

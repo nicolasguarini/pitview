@@ -55,6 +55,7 @@
 		93BDC7172BBB62DE004EA7C1 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BDC7162BBB62DE004EA7C1 /* DateUtils.swift */; };
 		93BDC7192BBB677B004EA7C1 /* PVBasicRaceStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BDC7182BBB677B004EA7C1 /* PVBasicRaceStatsView.swift */; };
 		93BDC71B2BBB683A004EA7C1 /* PVRaceResultsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BDC71A2BBB683A004EA7C1 /* PVRaceResultsListView.swift */; };
+		93D502AD2C3B0AC000D70E1C /* PVSeasonProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D502AC2C3B0AC000D70E1C /* PVSeasonProgressView.swift */; };
 		93E10F7B2BB72405009B6EE1 /* PVSmallCircuitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E10F7A2BB72405009B6EE1 /* PVSmallCircuitCard.swift */; };
 		93E10F7D2BB72527009B6EE1 /* PVRaceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E10F7C2BB72527009B6EE1 /* PVRaceHeader.swift */; };
 		93E413092BACD1D4008B71F1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E413082BACD1D4008B71F1 /* Array.swift */; };
@@ -110,6 +111,7 @@
 		93BDC7162BBB62DE004EA7C1 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		93BDC7182BBB677B004EA7C1 /* PVBasicRaceStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVBasicRaceStatsView.swift; sourceTree = "<group>"; };
 		93BDC71A2BBB683A004EA7C1 /* PVRaceResultsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVRaceResultsListView.swift; sourceTree = "<group>"; };
+		93D502AC2C3B0AC000D70E1C /* PVSeasonProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVSeasonProgressView.swift; sourceTree = "<group>"; };
 		93E10F7A2BB72405009B6EE1 /* PVSmallCircuitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVSmallCircuitCard.swift; sourceTree = "<group>"; };
 		93E10F7C2BB72527009B6EE1 /* PVRaceHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVRaceHeader.swift; sourceTree = "<group>"; };
 		93E413082BACD1D4008B71F1 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				9372DA5D2BB758F00005C63F /* PVAppHeader.swift */,
 				93BDC7182BBB677B004EA7C1 /* PVBasicRaceStatsView.swift */,
 				93BDC71A2BBB683A004EA7C1 /* PVRaceResultsListView.swift */,
+				93D502AC2C3B0AC000D70E1C /* PVSeasonProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				9319F6F12B8D63B0002842CD /* Alert.swift in Sources */,
 				934C2E862BB61154006726F4 /* PVRaceViewModel.swift in Sources */,
 				93E413092BACD1D4008B71F1 /* Array.swift in Sources */,
+				93D502AD2C3B0AC000D70E1C /* PVSeasonProgressView.swift in Sources */,
 				935265FB2B8A36A000580459 /* PitViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

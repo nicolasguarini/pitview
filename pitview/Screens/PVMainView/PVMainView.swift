@@ -17,6 +17,8 @@ struct PVMainView: View {
                 VStack {
                     PVAppHeader()
                     
+                    PVSeasonProgressView(season: "2024", races: viewModel.season.races)
+                    
                     Picker(selection: $selectedIndex, label: Text("")) {
                         Text("Drivers").tag(0)
                         Text("Constructors").tag(1)
