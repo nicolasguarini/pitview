@@ -21,11 +21,15 @@ struct PVLatestRaceView: View {
                         Text(race.circuit.circuitName).font(.f1FontRegular(size: 14))
                         Text(race.date ?? "").font(.f1FontRegular(size: 14))
                     }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .multilineTextAlignment(.leading)
+                    
+                    Spacer()
                     
                     Image(race.circuit.circuitId)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 120, height: 80)
+                        .frame(width: 100)
                         .clipped()
                 }
                 
@@ -52,7 +56,7 @@ struct PVLatestRaceView: View {
                 }
                 
                 
-            }.padding().border(.primary, cornerRadius: 10).foregroundColor(.primary)
+            }.frame(maxWidth: .infinity).padding().border(.secondary, cornerRadius: 10).foregroundColor(.primary)
         }
     }
 }

@@ -13,7 +13,7 @@ struct PVTabView: View {
             PVMainView()
                 .tabItem { Label("Home", systemImage: "house") }
             
-            PVSeasonsView()
+            PVStandingsView ()
                 .tabItem { Label("Standings", systemImage: "chart.bar.fill") }
             
             PVDriversView()

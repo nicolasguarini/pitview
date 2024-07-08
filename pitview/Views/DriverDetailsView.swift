@@ -60,11 +60,13 @@ struct DriverDetailsView: View {
                             .frame(height: 80)
                             .padding()
                         
+                        /*
                         Button(action: {
                             
                         }, label: {
                             Text("Season Data")
                         }).buttonStyle(.bordered)
+                         */
                     }
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .padding(.vertical)

@@ -14,28 +14,32 @@ struct PVMainView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                VStack {
-                    PVAppHeader()
-                    
-                    PVSeasonProgressView(season: "2024", races: viewModel.season.races)
-                    
-                    if viewModel.latestRace != nil {
-                        VStack(alignment: .leading, spacing: 12) {
-                            Text("Latest Race").font(.f1FontRegular(size: 16))
-                            PVLatestRaceView(race: viewModel.latestRace!, raceResults: viewModel.latestRaceResults)
+                ScrollView {
+                    VStack {
+                        PVAppHeader()
+                        
+                        PVSeasonProgressView(season: viewModel.season.season, races: viewModel.season.races)
+                        
+                        if viewModel.latestRace != nil {
+                            VStack(spacing: 25) {
+                                VStack(alignment: .leading, spacing: 12) {
+                                    Text("Latest Race").font(.f1FontRegular(size: 16))
+                                    PVLatestRaceView(race: viewModel.latestRace!, raceResults: viewModel.latestRaceResults)
+                                }
+                                
+                                if Int(viewModel.latestRace!.round) ?? 1000 < viewModel.season.races.count {
+                                    let nextRace = viewModel.season.races[Int(viewModel.latestRace!.round)!]
+                                    
+                                    VStack(alignment: .leading, spacing: 12) {
+                                        Text("Next Race").font(.f1FontRegular(size: 16))
+                                        PVNextRaceView(race: nextRace)
+                                    }
+                                }
+                            }
                         }
-                    }
-                    
-                    Picker(selection: $selectedIndex, label: Text("")) {
-                        Text("Drivers").tag(0)
-                        Text("Constructors").tag(1)
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-                    .frame(width: 280)
-                    .padding()
-                    
-                    if selectedIndex == 0 {
-                        VStack {
+                        
+                        VStack(alignment: .center) {
+                            Text("Standings").font(.f1FontBold(size: 16)).padding()
                             ForEach(viewModel.driverStandings.first(5), id: \.driver.code) { driverStanding in
                                     Button(action: {
                                         viewModel.selectedDriver = driverStanding.driver
@@ -45,54 +49,44 @@ struct PVMainView: View {
                                         PVSimpleListItemView(left: driverStanding.position,
                                                              main: driverStanding.driver.givenName + " " + driverStanding.driver.familyName,
                                                              right: driverStanding.points + " pt."
-                                        ).padding()
+                                        ).padding(10)
                                     }.foregroundColor(.primary)
                             }
                         }
-                    } else {
-                        VStack {
-                            ForEach(viewModel.constructorStandings.first(5), id: \.constructor.constructorId) { constructorStanding in
-                                PVSimpleListItemView(left: constructorStanding.position,
-                                                     main: constructorStanding.constructor.name,
-                                                     right: constructorStanding.points + " pt."
-                                ).padding()
-                            }
-                        }
-                    }
-                    
-                    
-                    VStack {
-                        Spacer()
                         
-                        List {
+                        /*
+                        VStack(alignment: .center) {
+                            Text("Races").font(.f1FontBold(size: 16)).padding()
+                            
                             ForEach(viewModel.season.races, id: \.raceName) { race in
-                                NavigationLink(destination: PVRaceView(race: race), label: {
-                                    Text(race.raceName)
-                                })
+                                NavigationLink(destination: PVRaceView(race: race)) {
+                                    Text(race.raceName).padding(5)
+                                }.foregroundColor(.primary)
                             }
                         }
+                         */
+                    }.padding(4).task {
+                        viewModel.getSeason()
                     }
-                }.padding(8).task {
-                    viewModel.getSeason()
+                    
+                    if viewModel.isLoading {
+                        LoadingView()
+                    }
                 }
-                
-                if viewModel.isLoading {
-                    LoadingView()
-                }
+            }.alert(item: $viewModel.alertItem) { alertItem in
+                Alert(title: alertItem.title,
+                      message: alertItem.message,
+                      dismissButton: alertItem.dismssButton)
             }
-        }.alert(item: $viewModel.alertItem) { alertItem in
-            Alert(title: alertItem.title,
-                  message: alertItem.message,
-                  dismissButton: alertItem.dismssButton)
-        }
-        .sheet(isPresented: $viewModel.isShowingDriverDetails) {
-            if let driver = viewModel.selectedDriver, 
-                let constructor = viewModel.selectedConstructor {
-                DriverDetailsView(
-                    isPresented: $viewModel.isShowingDriverDetails,
-                    driver: driver,
-                    constructor: constructor
-                )
+            .sheet(isPresented: $viewModel.isShowingDriverDetails) {
+                if let driver = viewModel.selectedDriver,
+                    let constructor = viewModel.selectedConstructor {
+                    DriverDetailsView(
+                        isPresented: $viewModel.isShowingDriverDetails,
+                        driver: driver,
+                        constructor: constructor
+                    )
+                }
             }
         }
     }

@@ -19,4 +19,21 @@ class DateUtils {
             return dateString
         }
     }
+    
+    static func timeUntil(_ futureDate: Date) -> (days: Int, hours: Int, minutes: Int) {
+        let currentDate = Date()
+        
+        if futureDate <= currentDate {
+            return (0, 0, 0)
+        }
+        
+        let components = Calendar.current.dateComponents([.day, .hour, .minute], from: currentDate, to: futureDate)
+        
+        let days = components.day ?? 0
+        let hours = components.hour ?? 0
+        let minutes = components.minute ?? 0
+        
+        return (days, hours, minutes)
+    }
+
 }
