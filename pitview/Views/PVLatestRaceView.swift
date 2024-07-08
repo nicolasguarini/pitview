@@ -19,7 +19,7 @@ struct PVLatestRaceView: View {
                         Text("Round " + race.round).font(.f1FontBold(size: 12))
                         Text(race.raceName).font(.f1FontBold(size: 22))
                         Text(race.circuit.circuitName).font(.f1FontRegular(size: 14))
-                        Text(race.date ?? "").font(.f1FontRegular(size: 14))
+                        Text(DateUtils.formatDate(race.date ?? "") + " - " + (race.time ?? "").dropLast(4) ).font(.f1FontRegular(size: 14))
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .multilineTextAlignment(.leading)

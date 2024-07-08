@@ -50,8 +50,8 @@
 		9372DA602BB75EF80005C63F /* RaceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372DA5F2BB75EF80005C63F /* RaceUtils.swift */; };
 		937C3FF42B8A5CF100AD50BA /* PVAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF32B8A5CF100AD50BA /* PVAboutView.swift */; };
 		937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF62B8A5EC700AD50BA /* PVMainView.swift */; };
-		937C3FFA2B8A5F7C00AD50BA /* PVDriversView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */; };
-		937C3FFD2B8A5F9700AD50BA /* PVTracksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FFC2B8A5F9700AD50BA /* PVTracksView.swift */; };
+		937C3FFA2B8A5F7C00AD50BA /* PVScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FF92B8A5F7C00AD50BA /* PVScheduleView.swift */; };
+		937C3FFD2B8A5F9700AD50BA /* PVSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FFC2B8A5F9700AD50BA /* PVSettingsView.swift */; };
 		937C40002B8A623900AD50BA /* PVStandingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C3FFF2B8A623900AD50BA /* PVStandingsView.swift */; };
 		93BDC7172BBB62DE004EA7C1 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BDC7162BBB62DE004EA7C1 /* DateUtils.swift */; };
 		93BDC7192BBB677B004EA7C1 /* PVBasicRaceStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BDC7182BBB677B004EA7C1 /* PVBasicRaceStatsView.swift */; };
@@ -60,6 +60,8 @@
 		93E10F7B2BB72405009B6EE1 /* PVSmallCircuitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E10F7A2BB72405009B6EE1 /* PVSmallCircuitCard.swift */; };
 		93E10F7D2BB72527009B6EE1 /* PVRaceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E10F7C2BB72527009B6EE1 /* PVRaceHeader.swift */; };
 		93E413092BACD1D4008B71F1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E413082BACD1D4008B71F1 /* Array.swift */; };
+		93EE53DD2C3C1F5D0082A9CA /* PVScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EE53DC2C3C1F5D0082A9CA /* PVScheduleViewModel.swift */; };
+		93EE53DF2C3C27E50082A9CA /* PVRaceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EE53DE2C3C27E50082A9CA /* PVRaceCardView.swift */; };
 		93FDBA502C3BDB41008A56C9 /* PVStandingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FDBA4F2C3BDB41008A56C9 /* PVStandingsViewModel.swift */; };
 		93FDBA522C3BEA6A008A56C9 /* PVNextRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FDBA512C3BEA6A008A56C9 /* PVNextRaceView.swift */; };
 /* End PBXBuildFile section */
@@ -109,8 +111,8 @@
 		9372DA5F2BB75EF80005C63F /* RaceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceUtils.swift; sourceTree = "<group>"; };
 		937C3FF32B8A5CF100AD50BA /* PVAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVAboutView.swift; sourceTree = "<group>"; };
 		937C3FF62B8A5EC700AD50BA /* PVMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVMainView.swift; sourceTree = "<group>"; };
-		937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVDriversView.swift; sourceTree = "<group>"; };
-		937C3FFC2B8A5F9700AD50BA /* PVTracksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTracksView.swift; sourceTree = "<group>"; };
+		937C3FF92B8A5F7C00AD50BA /* PVScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVScheduleView.swift; sourceTree = "<group>"; };
+		937C3FFC2B8A5F9700AD50BA /* PVSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVSettingsView.swift; sourceTree = "<group>"; };
 		937C3FFF2B8A623900AD50BA /* PVStandingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVStandingsView.swift; sourceTree = "<group>"; };
 		93BDC7162BBB62DE004EA7C1 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		93BDC7182BBB677B004EA7C1 /* PVBasicRaceStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVBasicRaceStatsView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,8 @@
 		93E10F7A2BB72405009B6EE1 /* PVSmallCircuitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVSmallCircuitCard.swift; sourceTree = "<group>"; };
 		93E10F7C2BB72527009B6EE1 /* PVRaceHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVRaceHeader.swift; sourceTree = "<group>"; };
 		93E413082BACD1D4008B71F1 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		93EE53DC2C3C1F5D0082A9CA /* PVScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVScheduleViewModel.swift; sourceTree = "<group>"; };
+		93EE53DE2C3C27E50082A9CA /* PVRaceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVRaceCardView.swift; sourceTree = "<group>"; };
 		93FDBA4F2C3BDB41008A56C9 /* PVStandingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVStandingsViewModel.swift; sourceTree = "<group>"; };
 		93FDBA512C3BEA6A008A56C9 /* PVNextRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVNextRaceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -240,6 +244,7 @@
 				93D502AC2C3B0AC000D70E1C /* PVSeasonProgressView.swift */,
 				930744A22C3B48D700C8CB13 /* PVLatestRaceView.swift */,
 				93FDBA512C3BEA6A008A56C9 /* PVNextRaceView.swift */,
+				93EE53DE2C3C27E50082A9CA /* PVRaceCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -249,8 +254,8 @@
 			children = (
 				936B62032B9522E000D0BB10 /* PVRaceView */,
 				937C3FFE2B8A621100AD50BA /* PVStandingsView */,
-				937C3FFB2B8A5F8500AD50BA /* PVTracksView */,
-				937C3FF82B8A5F4A00AD50BA /* PVDriversView */,
+				937C3FFB2B8A5F8500AD50BA /* PVSettingsView */,
+				937C3FF82B8A5F4A00AD50BA /* PVScheduleView */,
 				937C3FF52B8A5E3900AD50BA /* PVMainView */,
 				937C3FF22B8A5CC000AD50BA /* PVAboutView */,
 				93394D8F2B8A5B8A003ABB24 /* PVTabView.swift */,
@@ -325,20 +330,21 @@
 			path = PVMainView;
 			sourceTree = "<group>";
 		};
-		937C3FF82B8A5F4A00AD50BA /* PVDriversView */ = {
+		937C3FF82B8A5F4A00AD50BA /* PVScheduleView */ = {
 			isa = PBXGroup;
 			children = (
-				937C3FF92B8A5F7C00AD50BA /* PVDriversView.swift */,
+				937C3FF92B8A5F7C00AD50BA /* PVScheduleView.swift */,
+				93EE53DC2C3C1F5D0082A9CA /* PVScheduleViewModel.swift */,
 			);
-			path = PVDriversView;
+			path = PVScheduleView;
 			sourceTree = "<group>";
 		};
-		937C3FFB2B8A5F8500AD50BA /* PVTracksView */ = {
+		937C3FFB2B8A5F8500AD50BA /* PVSettingsView */ = {
 			isa = PBXGroup;
 			children = (
-				937C3FFC2B8A5F9700AD50BA /* PVTracksView.swift */,
+				937C3FFC2B8A5F9700AD50BA /* PVSettingsView.swift */,
 			);
-			path = PVTracksView;
+			path = PVSettingsView;
 			sourceTree = "<group>";
 		};
 		937C3FFE2B8A621100AD50BA /* PVStandingsView */ = {
@@ -434,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93EE53DF2C3C27E50082A9CA /* PVRaceCardView.swift in Sources */,
 				93394D902B8A5B8A003ABB24 /* PVTabView.swift in Sources */,
 				9319F6E52B8D5457002842CD /* PVMainViewModel.swift in Sources */,
 				93BDC7192BBB677B004EA7C1 /* PVBasicRaceStatsView.swift in Sources */,
@@ -452,7 +459,7 @@
 				9372DA5A2BB74E860005C63F /* PVSessionTimeView.swift in Sources */,
 				937C3FF72B8A5EC700AD50BA /* PVMainView.swift in Sources */,
 				931B1B3A2B8FD90000B13D99 /* StandingsTable.swift in Sources */,
-				937C3FFD2B8A5F9700AD50BA /* PVTracksView.swift in Sources */,
+				937C3FFD2B8A5F9700AD50BA /* PVSettingsView.swift in Sources */,
 				93BDC7172BBB62DE004EA7C1 /* DateUtils.swift in Sources */,
 				9372DA602BB75EF80005C63F /* RaceUtils.swift in Sources */,
 				936B620D2B95321900D0BB10 /* Location.swift in Sources */,
@@ -463,8 +470,9 @@
 				937C3FF42B8A5CF100AD50BA /* PVAboutView.swift in Sources */,
 				93FDBA502C3BDB41008A56C9 /* PVStandingsViewModel.swift in Sources */,
 				931B1B362B8FD8A200B13D99 /* Constructor.swift in Sources */,
-				937C3FFA2B8A5F7C00AD50BA /* PVDriversView.swift in Sources */,
+				937C3FFA2B8A5F7C00AD50BA /* PVScheduleView.swift in Sources */,
 				936B62052B9522F500D0BB10 /* PVRaceView.swift in Sources */,
+				93EE53DD2C3C1F5D0082A9CA /* PVScheduleViewModel.swift in Sources */,
 				9319F6E32B8D52AA002842CD /* PVError.swift in Sources */,
 				932AEFDC2B9C74B500FB00BA /* Font.swift in Sources */,
 				934C2E842BB61008006726F4 /* Result.swift in Sources */,

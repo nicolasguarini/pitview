@@ -16,10 +16,10 @@ struct PVTabView: View {
             PVStandingsView ()
                 .tabItem { Label("Standings", systemImage: "chart.bar.fill") }
             
-            PVDriversView()
-                .tabItem { Label("Events", systemImage: "calendar") }
+            PVScheduleView()
+                .tabItem { Label("Schedule", systemImage: "calendar") }
             
-            PVTracksView()
+            PVSettingsView()
                 .tabItem { Label("Settings", systemImage: "gear") }
         }.tint(.hotRed)
     }

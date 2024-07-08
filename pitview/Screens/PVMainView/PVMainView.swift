@@ -65,7 +65,7 @@ struct PVMainView: View {
                             }
                         }
                          */
-                    }.padding(4).task {
+                    }.padding(8).task {
                         viewModel.getSeason()
                     }
                     
