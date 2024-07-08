@@ -16,6 +16,8 @@ import Foundation
     @Published var selectedDriver: Driver? = nil
     @Published var selectedConstructor: Constructor? = nil
     @Published var isShowingDriverDetails = false
+    @Published var latestRace: Race? = nil
+    @Published var latestRaceResults: [DriverResult] = []
     
     func getSeason() {
         isLoading = true
@@ -25,6 +27,24 @@ import Foundation
                 season = try await NetworkManager.shared.getCurrentSeason()
                 driverStandings = try await NetworkManager.shared.getDriverStandings()
                 constructorStandings = try await NetworkManager.shared.getConstructorStandings()
+                latestRace = RaceUtils.getLastCompletedRace(from: season.races)
+                
+                if latestRace != nil {
+                    let round = Int(self.latestRace!.round)
+                    latestRaceResults = try await NetworkManager.shared.getRaceReults(season: "current", round: String(round!))
+                    
+                    /* Uncomment if you want to display the latest race with results, even if that's not the actual last race
+                    while latestRaceResults.isEmpty && round! >= 1 {
+                        latestRaceResults = try await NetworkManager.shared.getRaceReults(season: "current", round: String(round!))
+                        round! -= 1
+                    }
+                    
+                    if latestRace?.round != String(round!) {
+                        latestRace = season.races[Int(round!)]
+                    }
+                     */
+                }
+                print(latestRace?.circuit.circuitId ?? "s")
                 isLoading = false
             } catch {
                 if let pvError = error as? PVError {

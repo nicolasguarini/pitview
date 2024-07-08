@@ -19,6 +19,13 @@ struct PVMainView: View {
                     
                     PVSeasonProgressView(season: "2024", races: viewModel.season.races)
                     
+                    if viewModel.latestRace != nil {
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("Latest Race").font(.f1FontRegular(size: 16))
+                            PVLatestRaceView(race: viewModel.latestRace!, raceResults: viewModel.latestRaceResults)
+                        }
+                    }
+                    
                     Picker(selection: $selectedIndex, label: Text("")) {
                         Text("Drivers").tag(0)
                         Text("Constructors").tag(1)
@@ -65,7 +72,7 @@ struct PVMainView: View {
                             }
                         }
                     }
-                }.task {
+                }.padding(8).task {
                     viewModel.getSeason()
                 }
                 

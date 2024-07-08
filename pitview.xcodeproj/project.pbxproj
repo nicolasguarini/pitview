@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930744A32C3B48D700C8CB13 /* PVLatestRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930744A22C3B48D700C8CB13 /* PVLatestRaceView.swift */; };
 		9319F6DD2B8D4E96002842CD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319F6DC2B8D4E96002842CD /* NetworkManager.swift */; };
 		9319F6E02B8D4F63002842CD /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319F6DF2B8D4F63002842CD /* Season.swift */; };
 		9319F6E32B8D52AA002842CD /* PVError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319F6E22B8D52AA002842CD /* PVError.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		930744A22C3B48D700C8CB13 /* PVLatestRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVLatestRaceView.swift; sourceTree = "<group>"; };
 		9313D4832B9C665200E49B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9313D4852B9C669A00E49B54 /* project.pbxproj */ = {isa = PBXFileReference; lastKnownFileType = text.pbxproject; name = project.pbxproj; path = PitView.xcodeproj/project.pbxproj; sourceTree = "<group>"; };
 		9319F6DC2B8D4E96002842CD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				93BDC7182BBB677B004EA7C1 /* PVBasicRaceStatsView.swift */,
 				93BDC71A2BBB683A004EA7C1 /* PVRaceResultsListView.swift */,
 				93D502AC2C3B0AC000D70E1C /* PVSeasonProgressView.swift */,
+				930744A22C3B48D700C8CB13 /* PVLatestRaceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				936B620B2B9531B600D0BB10 /* MockData.swift in Sources */,
 				9319F6E02B8D4F63002842CD /* Season.swift in Sources */,
 				9372DA5C2BB756960005C63F /* PVSimpleListItemView.swift in Sources */,
+				930744A32C3B48D700C8CB13 /* PVLatestRaceView.swift in Sources */,
 				936184A42B90CF1600E3CF20 /* DriverDetailsView.swift in Sources */,
 				9319F6EB2B8D6130002842CD /* MRData.swift in Sources */,
 				9372DA5E2BB758F00005C63F /* PVAppHeader.swift in Sources */,
@@ -614,7 +618,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = it.nicolasguarini.pitview;
+				PRODUCT_BUNDLE_IDENTIFIER = it.nicolasguarini.pitview2024;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -644,7 +648,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = it.nicolasguarini.pitview;
+				PRODUCT_BUNDLE_IDENTIFIER = it.nicolasguarini.pitview2024;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
