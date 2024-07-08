@@ -62,6 +62,7 @@
 		93E413092BACD1D4008B71F1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E413082BACD1D4008B71F1 /* Array.swift */; };
 		93EE53DD2C3C1F5D0082A9CA /* PVScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EE53DC2C3C1F5D0082A9CA /* PVScheduleViewModel.swift */; };
 		93EE53DF2C3C27E50082A9CA /* PVRaceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EE53DE2C3C27E50082A9CA /* PVRaceCardView.swift */; };
+		93EE53E12C3C34190082A9CA /* PVSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EE53E02C3C34190082A9CA /* PVSettingsViewModel.swift */; };
 		93FDBA502C3BDB41008A56C9 /* PVStandingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FDBA4F2C3BDB41008A56C9 /* PVStandingsViewModel.swift */; };
 		93FDBA522C3BEA6A008A56C9 /* PVNextRaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FDBA512C3BEA6A008A56C9 /* PVNextRaceView.swift */; };
 /* End PBXBuildFile section */
@@ -123,6 +124,7 @@
 		93E413082BACD1D4008B71F1 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		93EE53DC2C3C1F5D0082A9CA /* PVScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVScheduleViewModel.swift; sourceTree = "<group>"; };
 		93EE53DE2C3C27E50082A9CA /* PVRaceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVRaceCardView.swift; sourceTree = "<group>"; };
+		93EE53E02C3C34190082A9CA /* PVSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVSettingsViewModel.swift; sourceTree = "<group>"; };
 		93FDBA4F2C3BDB41008A56C9 /* PVStandingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVStandingsViewModel.swift; sourceTree = "<group>"; };
 		93FDBA512C3BEA6A008A56C9 /* PVNextRaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVNextRaceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -343,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				937C3FFC2B8A5F9700AD50BA /* PVSettingsView.swift */,
+				93EE53E02C3C34190082A9CA /* PVSettingsViewModel.swift */,
 			);
 			path = PVSettingsView;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				936B62092B95304400D0BB10 /* Circuit.swift in Sources */,
 				935BBAE72BA66D4F00F23E8B /* Color.swift in Sources */,
 				93BDC71B2BBB683A004EA7C1 /* PVRaceResultsListView.swift in Sources */,
+				93EE53E12C3C34190082A9CA /* PVSettingsViewModel.swift in Sources */,
 				93E10F7B2BB72405009B6EE1 /* PVSmallCircuitCard.swift in Sources */,
 				9319F6ED2B8D6142002842CD /* RaceTable.swift in Sources */,
 				931B1B382B8FD8C300B13D99 /* Driver.swift in Sources */,
