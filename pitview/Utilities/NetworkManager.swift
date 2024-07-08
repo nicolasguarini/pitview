@@ -10,8 +10,8 @@ import Foundation
 final class NetworkManager {
     static let shared = NetworkManager()
     
-    static let baseURL = "https://ergast.com/api/f1/"
-    //static let baseURL = "http://api.jolpi.ca/ergast/f1/"
+    //static let baseURL = "https://ergast.com/api/f1/"
+    static let baseURL = "http://api.jolpi.ca/ergast/f1/"
     static let currentSeasonURL = baseURL + "current.json"
     
     private init() {}
@@ -77,8 +77,6 @@ final class NetworkManager {
     
     func getRaceReults(season: String = "current", round: String) async throws -> [DriverResult] {
         let raceResultsURL = NetworkManager.baseURL + season + "/" + round + "/results.json"
-        
-        print(raceResultsURL)
         
         guard let url = URL(string: raceResultsURL) else {
             throw PVError.invalidURL

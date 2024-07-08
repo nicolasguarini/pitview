@@ -44,7 +44,7 @@ import Foundation
                     }
                      */
                 }
-                print(latestRace?.circuit.circuitId ?? "s")
+
                 isLoading = false
             } catch {
                 if let pvError = error as? PVError {

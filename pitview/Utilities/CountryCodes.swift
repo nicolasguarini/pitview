@@ -132,7 +132,7 @@ class CountryCodes {
     
     static func countryCode(for stateName: String) -> String? {
         let locale = Locale(identifier: "en_US")
-        print(stateName)
+
         guard let countryCode = Locale.Region.isoRegions.first(where: { locale.localizedString(forRegionCode: $0.identifier)?.lowercased() == stateName.lowercased() }) else {
             return nil
         }
