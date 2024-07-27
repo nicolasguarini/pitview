@@ -70,7 +70,7 @@ struct PVMainView: View {
                     }
                     
                     if viewModel.isLoading {
-                        LoadingView()
+                        PVLoadingView()
                     }
                 }
             }.alert(item: $viewModel.alertItem) { alertItem in
@@ -81,7 +81,7 @@ struct PVMainView: View {
             .sheet(isPresented: $viewModel.isShowingDriverDetails) {
                 if let driver = viewModel.selectedDriver,
                     let constructor = viewModel.selectedConstructor {
-                    DriverDetailsView(
+                    PVDriverDetailsView(
                         isPresented: $viewModel.isShowingDriverDetails,
                         driver: driver,
                         constructor: constructor

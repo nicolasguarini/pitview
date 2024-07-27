@@ -69,7 +69,7 @@ struct PVScheduleView: View {
                 
                 
                 if viewModel.isLoading {
-                    LoadingView()
+                    PVLoadingView()
                 }
             }.alert(item: $viewModel.alertItem) { alertItem in
                 Alert(title: alertItem.title,

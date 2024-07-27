@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LoadingView: View {
+struct PVLoadingView: View {
     var body: some View {
         ZStack {
             Color(.systemBackground)
@@ -19,5 +19,5 @@ struct LoadingView: View {
 }
 
 #Preview {
-    LoadingView()
+    PVLoadingView()
 }

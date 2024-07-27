@@ -85,7 +85,7 @@ struct PVRaceView: View {
                         }
                         
                         if viewModel.isLoading {
-                            LoadingView()
+                            PVLoadingView()
                         }
                     }
                     

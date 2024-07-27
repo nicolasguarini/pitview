@@ -8,7 +8,7 @@
 import SwiftUI
 import FlagsKit
 
-struct DriverDetailsView: View {
+struct PVDriverDetailsView: View {
     @Binding var isPresented: Bool
     let driver: Driver
     let constructor: Constructor
@@ -133,7 +133,7 @@ struct DriverDetailsView: View {
 }
 
 #Preview {
-    DriverDetailsView(
+    PVDriverDetailsView(
         isPresented: .constant(true),
         driver: MockData.mockDriver,
         constructor: MockData.mockConstructor
