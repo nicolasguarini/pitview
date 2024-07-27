@@ -14,10 +14,11 @@ import Foundation
     
     func getResults(season: String, round: String) {
         isLoading = true
+        let selectedSeason = UserDefaults.standard.string(forKey: "selectedSeason") ?? "current"
         
         Task {
             do {
-                results = try await NetworkManager.shared.getRaceReults(round: round)
+                results = try await NetworkManager.shared.getRaceReults(season: selectedSeason, round: round)
                 isLoading = false
             } catch {
                 if let pvError = error as? PVError {

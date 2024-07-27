@@ -15,6 +15,7 @@ import Foundation
     }
 
     init() {
-        self.selectedSeason = UserDefaults.standard.string(forKey: "selectedSeason") ?? "2024"
+        let currentYear = Calendar.current.component(.year, from: Date())
+        self.selectedSeason = UserDefaults.standard.string(forKey: "selectedSeason") ?? "\(currentYear)"
     }
 }

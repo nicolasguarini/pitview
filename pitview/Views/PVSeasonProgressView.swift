@@ -27,7 +27,6 @@ struct PVSeasonProgressView: View {
     var body: some View {
         HStack {
             Text(season + " Season").font(.f1FontBold(size: 20))
-            Image(systemName: "pencil")
             Spacer()
             VStack(alignment: .leading) {
                 Text("\(progressPercentage)%").font(.f1FontBold(size: 20))

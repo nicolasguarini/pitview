@@ -15,10 +15,11 @@ import Foundation
     
     func getSeason() {
         isLoading = true
+        let selectedSeason = UserDefaults.standard.string(forKey: "selectedSeason") ?? "current"
         
         Task {
             do {
-                season = try await NetworkManager.shared.getCurrentSeason()
+                season = try await NetworkManager.shared.getSeason(season: selectedSeason)
                 
                 latestRace = RaceUtils.getLastCompletedRace(from: season.races)
                 

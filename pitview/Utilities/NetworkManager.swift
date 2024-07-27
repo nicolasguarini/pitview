@@ -12,12 +12,11 @@ final class NetworkManager {
     
     //static let baseURL = "https://ergast.com/api/f1/"
     static let baseURL = "http://api.jolpi.ca/ergast/f1/"
-    static let currentSeasonURL = baseURL + "current.json"
     
     private init() {}
     
-    func getCurrentSeason() async throws -> Season {
-        guard let url = URL(string: NetworkManager.currentSeasonURL) else {
+    func getSeason(season: String = "current") async throws -> Season {
+        guard let url = URL(string: NetworkManager.baseURL + season + ".json") else {
             throw PVError.invalidURL
         }
         

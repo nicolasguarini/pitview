@@ -21,21 +21,22 @@ import Foundation
     
     func getSeason() {
         isLoading = true
+        let selectedSeason = UserDefaults.standard.string(forKey: "selectedSeason") ?? "current"
         
         Task {
             do {
-                season = try await NetworkManager.shared.getCurrentSeason()
-                driverStandings = try await NetworkManager.shared.getDriverStandings()
-                constructorStandings = try await NetworkManager.shared.getConstructorStandings()
+                season = try await NetworkManager.shared.getSeason(season: selectedSeason)
+                driverStandings = try await NetworkManager.shared.getDriverStandings(season: selectedSeason)
+                constructorStandings = try await NetworkManager.shared.getConstructorStandings(season: selectedSeason)
                 latestRace = RaceUtils.getLastCompletedRace(from: season.races)
                 
                 if latestRace != nil {
                     let round = Int(self.latestRace!.round)
-                    latestRaceResults = try await NetworkManager.shared.getRaceReults(season: "current", round: String(round!))
+                    latestRaceResults = try await NetworkManager.shared.getRaceReults(season: selectedSeason, round: String(round!))
                     
                     /* Uncomment if you want to display the latest race with results, even if that's not the actual last race
                     while latestRaceResults.isEmpty && round! >= 1 {
-                        latestRaceResults = try await NetworkManager.shared.getRaceReults(season: "current", round: String(round!))
+                        latestRaceResults = try await NetworkManager.shared.getRaceReults(season: selectedSeason, round: String(round!))
                         round! -= 1
                     }
                     

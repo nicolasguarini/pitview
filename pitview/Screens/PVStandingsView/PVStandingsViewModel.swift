@@ -18,11 +18,12 @@ import Foundation
     
     func getStandings() {
         isLoading = true
+        let selectedSeason = UserDefaults.standard.string(forKey: "selectedSeason") ?? "current"
         
         Task {
             do {
-                driverStandings = try await NetworkManager.shared.getDriverStandings()
-                constructorStandings = try await NetworkManager.shared.getConstructorStandings()
+                driverStandings = try await NetworkManager.shared.getDriverStandings(season: selectedSeason)
+                constructorStandings = try await NetworkManager.shared.getConstructorStandings(season: selectedSeason)
                 isLoading = false
             } catch {
                 if let pvError = error as? PVError {

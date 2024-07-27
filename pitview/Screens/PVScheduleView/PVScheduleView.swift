@@ -10,6 +10,7 @@ import SwiftUI
 struct PVScheduleView: View {
     @StateObject var viewModel = PVScheduleViewModel()
     @State private var selectedIndex = 0
+    let currentYear = Calendar.current.component(.year, from: Date())
 
     var body: some View {
         NavigationView {
@@ -17,7 +18,7 @@ struct PVScheduleView: View {
                 VStack {
                     PVAppHeader()
                     
-                    PVSeasonProgressView(season: "2024", races: viewModel.season.races)
+                    PVSeasonProgressView(season: UserDefaults.standard.string(forKey: "selectedSeason") ?? "\(currentYear)", races: viewModel.season.races)
                     
                     Picker(selection: $selectedIndex, label: Text("")) {
                         Text("Future Races").tag(0)
@@ -33,18 +34,21 @@ struct PVScheduleView: View {
                         if selectedIndex == 0 {
                             ScrollView {
                                 VStack(spacing: 25) {
-                                    VStack(alignment: .leading, spacing: 15) {
-                                        Text("Next race").font(.f1FontRegular(size: 16))
-                                        PVNextRaceView(race: viewModel.season.races[nextRaceRound])
-                                    }
-                                    
-                                    VStack(alignment: .leading, spacing: 15) {
-                                        Text("Future races").font(.f1FontRegular(size: 16))
-                                        ForEach(viewModel.season.races[(nextRaceRound+1)...], id: \.raceName) { race in
-                                            PVNextRaceView(race: race)
+                                    if (nextRaceRound < viewModel.season.races.count) {
+                                        VStack(alignment: .leading, spacing: 15) {
+                                            Text("Next race").font(.f1FontRegular(size: 16))
+                                            PVNextRaceView(race: viewModel.season.races[nextRaceRound])
                                         }
+                                        
+                                        VStack(alignment: .leading, spacing: 15) {
+                                            Text("Future races").font(.f1FontRegular(size: 16))
+                                            ForEach(viewModel.season.races[(nextRaceRound+1)...], id: \.raceName) { race in
+                                                PVNextRaceView(race: race)
+                                            }
+                                        }
+                                    } else {
+                                        Text("The season is finished! No upcoming races.")
                                     }
-                                    
                                 }
                             }
                         } else {
