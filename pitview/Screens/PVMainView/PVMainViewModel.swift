@@ -13,15 +13,16 @@ import Foundation
     @Published var constructorStandings: [ConstructorStanding] = [MockData.mockConstructorStanding]
     @Published var alertItem: AlertItem?
     @Published var isLoading = false
-    @Published var selectedDriver: Driver? = nil
-    @Published var selectedConstructor: Constructor? = nil
+    @Published var selectedDriver: Driver? = MockData.mockDriver
+    @Published var selectedConstructor: Constructor? = MockData.mockConstructor
     @Published var isShowingDriverDetails = false
     @Published var latestRace: Race? = nil
     @Published var latestRaceResults: [DriverResult] = []
     
     func getSeason() {
         isLoading = true
-        let selectedSeason = UserDefaults.standard.string(forKey: "selectedSeason") ?? "current"
+        //let selectedSeason = UserDefaults.standard.string(forKey: "selectedSeason") ?? "current"
+        let selectedSeason = "2024" // TODO: fix this. should work also if there is no driver standings
         
         Task {
             do {

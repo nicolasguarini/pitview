@@ -29,16 +29,14 @@ struct PVStandingsView: View {
                         ScrollView {
                             VStack {
                                 ForEach(viewModel.driverStandings, id: \.driver.code) { driverStanding in
-                                        Button(action: {
-                                            viewModel.selectedDriver = driverStanding.driver
-                                            viewModel.selectedConstructor = driverStanding.constructors[0]
-                                            viewModel.isShowingDriverDetails = true
-                                        }) {
-                                            PVSimpleListItemView(left: driverStanding.position,
-                                                                 main: driverStanding.driver.givenName + " " + driverStanding.driver.familyName,
-                                                                 right: driverStanding.points + " pt."
-                                            ).padding()
-                                        }.foregroundColor(.primary)
+                                    PVSimpleListItemView(left: driverStanding.position,
+                                                         main: driverStanding.driver.givenName + " " + driverStanding.driver.familyName,
+                                                         right: driverStanding.points + " pt."
+                                    ).padding().onTapGesture {
+                                        viewModel.selectedDriver = driverStanding.driver
+                                        viewModel.selectedConstructor = driverStanding.constructors[0]
+                                        viewModel.isShowingDriverDetails = true
+                                    }
                                 }
                             }
                         }

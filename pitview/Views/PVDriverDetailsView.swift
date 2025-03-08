@@ -15,6 +15,7 @@ struct PVDriverDetailsView: View {
     
     var body: some View {
         VStack {
+            
             HStack {
                 Spacer()
                 
@@ -23,11 +24,9 @@ struct PVDriverDetailsView: View {
                 
                 Spacer()
                 
-                Button(action: {
+                Image(systemName: "xmark.circle").onTapGesture {
                     isPresented = false
-                }, label: {
-                    Image(systemName: "xmark.circle")
-                })
+                }
             }
             
             VStack {
@@ -112,9 +111,6 @@ struct PVDriverDetailsView: View {
                     .offset(x: 5)
                 , alignment: .leading
             )
-            
-            
-            
         }.padding(.horizontal)
     }
     

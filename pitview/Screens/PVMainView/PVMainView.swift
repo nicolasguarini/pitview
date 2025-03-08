@@ -38,33 +38,21 @@ struct PVMainView: View {
                             }
                         }
                         
+                        
                         VStack(alignment: .center) {
                             Text("Standings").font(.f1FontBold(size: 16)).padding()
-                            ForEach(viewModel.driverStandings.first(5), id: \.driver.code) { driverStanding in
-                                    Button(action: {
-                                        viewModel.selectedDriver = driverStanding.driver
-                                        viewModel.selectedConstructor = driverStanding.constructors[0]
-                                        viewModel.isShowingDriverDetails = true
-                                    }) {
-                                        PVSimpleListItemView(left: driverStanding.position,
-                                                             main: driverStanding.driver.givenName + " " + driverStanding.driver.familyName,
-                                                             right: driverStanding.points + " pt."
-                                        ).padding(10)
-                                    }.foregroundColor(.primary)
+                            ForEach(viewModel.driverStandings.first(5), id: \.driver.driverId) { driverStanding in
+                                PVSimpleListItemView(left: driverStanding.position,
+                                                     main: driverStanding.driver.givenName + " " + driverStanding.driver.familyName,
+                                                     right: driverStanding.points + " pt."
+                                ).padding(10).onTapGesture(perform: {
+                                    viewModel.selectedDriver = driverStanding.driver
+                                    viewModel.selectedConstructor = driverStanding.constructors[0]
+                                    viewModel.isShowingDriverDetails = true
+                                })
                             }
                         }
-                        
-                        /*
-                        VStack(alignment: .center) {
-                            Text("Races").font(.f1FontBold(size: 16)).padding()
-                            
-                            ForEach(viewModel.season.races, id: \.raceName) { race in
-                                NavigationLink(destination: PVRaceView(race: race)) {
-                                    Text(race.raceName).padding(5)
-                                }.foregroundColor(.primary)
-                            }
-                        }
-                         */
+                    
                     }.padding(8).task {
                         viewModel.getSeason()
                     }

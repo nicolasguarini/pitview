@@ -15,7 +15,8 @@ import Foundation
     
     func getSeason() {
         isLoading = true
-        let selectedSeason = UserDefaults.standard.string(forKey: "selectedSeason") ?? "current"
+        //let selectedSeason = UserDefaults.standard.string(forKey: "selectedSeason") ?? "current"
+        let selectedSeason = "2024" // TODO: fix
         
         Task {
             do {

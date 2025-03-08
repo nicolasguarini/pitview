@@ -10,8 +10,8 @@ import Foundation
 final class NetworkManager {
     static let shared = NetworkManager()
     
-    static let baseURL = "https://ergast.com/api/f1/"
-    //static let baseURL = "http://api.jolpi.ca/ergast/f1/"
+    //static let baseURL = "https://ergast.com/api/f1/"
+    static let baseURL = "http://api.jolpi.ca/ergast/f1/"
     
     private init() {}
     
