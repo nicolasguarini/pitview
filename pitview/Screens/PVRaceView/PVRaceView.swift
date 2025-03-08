@@ -37,6 +37,15 @@ struct PVRaceView: View {
                                             )
                                         }
                                         
+                                        if let fp1 = race.firstPractice {
+                                            PVSessionTimeView(
+                                                sessionName: "Free Practice 1",
+                                                compact: false,
+                                                date: fp1.date,
+                                                time: fp1.time
+                                            )
+                                        }
+                                        
                                         if let fp2 = race.secondPractice {
                                             PVSessionTimeView(
                                                 sessionName: "Free Practice 2",
@@ -74,9 +83,13 @@ struct PVRaceView: View {
                                         }
                                         
                                         if let date = race.date, let time = race.time {
-                                            PVSessionTimeView(sessionName: "Race", compact: false, date: DateUtils.formatDate(date), time: time)
+                                            PVSessionTimeView(
+                                                sessionName: "Race",
+                                                compact: false,
+                                                date: DateUtils.formatDate(date),
+                                                time: time
+                                            )
                                         }
-                                        
                                     }
                                 }
                             }
@@ -88,7 +101,7 @@ struct PVRaceView: View {
                             PVLoadingView()
                         }
                     }
-                    
+
                     Spacer()
                 }
             }

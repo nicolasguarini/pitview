@@ -10,7 +10,6 @@ import SwiftUI
 struct PVTabView: View {
     var body: some View {
         TabView {
-            
             PVMainView()
                 .tabItem { Label("Home", systemImage: "house") }
             

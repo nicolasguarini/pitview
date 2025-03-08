@@ -46,8 +46,15 @@ final class NetworkManager {
         do {
             let decoder = JSONDecoder()
             let response = try decoder.decode(ErgastResponse.self, from: data)
-            let driverStandings = response.mrData.standingsTable!.standingsLists[0].driverStandings!
-            return driverStandings
+            let standingsLists = response.mrData.standingsTable!.standingsLists
+            
+            if (standingsLists.count == 0) {
+                return []
+            } else {
+                let driverStandings = standingsLists[0].driverStandings!
+                return driverStandings
+            }
+            
         } catch {
             print("Error decoding JSON: \(error)")
             throw PVError.invalidData
@@ -66,8 +73,14 @@ final class NetworkManager {
         do {
             let decoder = JSONDecoder()
             let response = try decoder.decode(ErgastResponse.self, from: data)
-            let constructorStandings = response.mrData.standingsTable!.standingsLists[0].constructorStandings!
-            return constructorStandings
+            let standingLists = response.mrData.standingsTable!.standingsLists
+            
+            if (standingLists.count == 0) {
+                return []
+            } else {
+                let constructorStandings = standingLists[0].constructorStandings!
+                return constructorStandings
+            }
         } catch {
             print("Error decoding JSON: \(error)")
             throw PVError.invalidData

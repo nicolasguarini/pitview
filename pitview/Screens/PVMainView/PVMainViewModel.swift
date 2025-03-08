@@ -21,8 +21,7 @@ import Foundation
     
     func getSeason() {
         isLoading = true
-        //let selectedSeason = UserDefaults.standard.string(forKey: "selectedSeason") ?? "current"
-        let selectedSeason = "2024" // TODO: fix this. should work also if there is no driver standings
+        let selectedSeason = UserDefaults.standard.string(forKey: "selectedSeason") ?? "current"
         
         Task {
             do {

@@ -43,9 +43,9 @@ struct PVSessionTimeView: View {
                 
                 Spacer()
                 
-                Button(action: {
-                    
-                }, label: Image(systemName: "bell")).tint(.hotRed)
+                Image(systemName: "bell").tint(.hotRed).onTapGesture {
+                    print("bell pressed")
+                }
             }
             .padding([.all], 20).frame(maxWidth: .infinity, alignment: .leading).background(.secondarySystemBackground)
             

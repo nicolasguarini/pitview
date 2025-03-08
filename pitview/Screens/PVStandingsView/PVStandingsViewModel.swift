@@ -18,8 +18,7 @@ import Foundation
     
     func getStandings() {
         isLoading = true
-        //let selectedSeason = UserDefaults.standard.string(forKey: "selectedSeason") ?? "current"
-        let selectedSeason = "2024" // TODO: fix
+        let selectedSeason = UserDefaults.standard.string(forKey: "selectedSeason") ?? "current"
         
         Task {
             do {

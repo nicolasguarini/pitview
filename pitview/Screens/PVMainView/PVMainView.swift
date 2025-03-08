@@ -41,6 +41,7 @@ struct PVMainView: View {
                         
                         VStack(alignment: .center) {
                             Text("Standings").font(.f1FontBold(size: 16)).padding()
+                            /*
                             ForEach(viewModel.driverStandings.first(5), id: \.driver.driverId) { driverStanding in
                                 PVSimpleListItemView(left: driverStanding.position,
                                                      main: driverStanding.driver.givenName + " " + driverStanding.driver.familyName,
@@ -51,6 +52,7 @@ struct PVMainView: View {
                                     viewModel.isShowingDriverDetails = true
                                 })
                             }
+                             */
                         }
                     
                     }.padding(8).task {

@@ -35,5 +35,17 @@ class DateUtils {
         
         return (days, hours, minutes)
     }
+    
+    static func isFutureDate(_ dateString: String) -> Bool {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.timeZone = TimeZone.current
+        
+        guard let date = dateFormatter.date(from: dateString) else {
+            return false
+        }
+        
+        return date > Date()
+    }
 
 }
