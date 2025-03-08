@@ -28,26 +28,35 @@ struct PVStandingsView: View {
                     if selectedIndex == 0 {
                         ScrollView {
                             VStack {
-                                ForEach(viewModel.driverStandings, id: \.driver.code) { driverStanding in
-                                    PVSimpleListItemView(left: driverStanding.position,
-                                                         main: driverStanding.driver.givenName + " " + driverStanding.driver.familyName,
-                                                         right: driverStanding.points + " pt."
-                                    ).padding().onTapGesture {
-                                        viewModel.selectedDriver = driverStanding.driver
-                                        viewModel.selectedConstructor = driverStanding.constructors[0]
-                                        viewModel.isShowingDriverDetails = true
+                                if (viewModel.driverStandings.count > 0){
+                                    ForEach(viewModel.driverStandings, id: \.driver.code) { driverStanding in
+                                        PVSimpleListItemView(left: driverStanding.position,
+                                                             main: driverStanding.driver.givenName + " " + driverStanding.driver.familyName,
+                                                             right: driverStanding.points + " pt."
+                                        ).padding().onTapGesture {
+                                            viewModel.selectedDriver = driverStanding.driver
+                                            viewModel.selectedConstructor = driverStanding.constructors[0]
+                                            viewModel.isShowingDriverDetails = true
+                                        }
                                     }
+                                } else {
+                                    Text("No standings yet! Wait the start of the season :)")
                                 }
+                                
                             }
                         }
                     } else {
                         ScrollView {
                             VStack {
-                                ForEach(viewModel.constructorStandings, id: \.constructor.constructorId) { constructorStanding in
-                                    PVSimpleListItemView(left: constructorStanding.position,
-                                                         main: constructorStanding.constructor.name,
-                                                         right: constructorStanding.points + " pt."
-                                    ).padding()
+                                if (viewModel.constructorStandings.count > 0){
+                                    ForEach(viewModel.constructorStandings, id: \.constructor.constructorId) { constructorStanding in
+                                        PVSimpleListItemView(left: constructorStanding.position,
+                                                             main: constructorStanding.constructor.name,
+                                                             right: constructorStanding.points + " pt."
+                                        ).padding()
+                                    }
+                                }else{
+                                    Text("No standings yet! Wait the start of the season :)")
                                 }
                             }
                         }

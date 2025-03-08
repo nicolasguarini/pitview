@@ -41,18 +41,21 @@ struct PVMainView: View {
                         
                         VStack(alignment: .center) {
                             Text("Standings").font(.f1FontBold(size: 16)).padding()
-                            /*
-                            ForEach(viewModel.driverStandings.first(5), id: \.driver.driverId) { driverStanding in
-                                PVSimpleListItemView(left: driverStanding.position,
-                                                     main: driverStanding.driver.givenName + " " + driverStanding.driver.familyName,
-                                                     right: driverStanding.points + " pt."
-                                ).padding(10).onTapGesture(perform: {
-                                    viewModel.selectedDriver = driverStanding.driver
-                                    viewModel.selectedConstructor = driverStanding.constructors[0]
-                                    viewModel.isShowingDriverDetails = true
-                                })
+                            
+                            if (viewModel.driverStandings.count > 0) {
+                                ForEach(viewModel.driverStandings.first(5), id: \.driver.driverId) { driverStanding in
+                                    PVSimpleListItemView(left: driverStanding.position,
+                                                         main: driverStanding.driver.givenName + " " + driverStanding.driver.familyName,
+                                                         right: driverStanding.points + " pt."
+                                    ).padding(10).onTapGesture(perform: {
+                                        viewModel.selectedDriver = driverStanding.driver
+                                        viewModel.selectedConstructor = driverStanding.constructors[0]
+                                        viewModel.isShowingDriverDetails = true
+                                    })
+                                }
+                            } else {
+                                Text("No standings yet! Wait the start of the season :)")
                             }
-                             */
                         }
                     
                     }.padding(8).task {
