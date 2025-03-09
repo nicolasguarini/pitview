@@ -40,7 +40,7 @@ struct PVMainView: View {
                         
                         
                         VStack(alignment: .center) {
-                            Text("Standings").font(.f1FontBold(size: 16)).padding()
+                            Text("Drivers Standings").font(.f1FontBold(size: 16)).padding()
                             
                             if (viewModel.driverStandings.count > 0) {
                                 ForEach(viewModel.driverStandings.first(5), id: \.driver.driverId) { driverStanding in
@@ -53,6 +53,29 @@ struct PVMainView: View {
                                         viewModel.isShowingDriverDetails = true
                                     })
                                 }
+                                
+                                NavigationLink(destination: PVStandingsView()) {
+                                    Text("View All →")
+                                }
+                            } else {
+                                Text("No standings yet! Wait the start of the season :)")
+                            }
+                        }
+                        
+                        VStack(alignment: .center) {
+                            Text("Constructors Standings").font(.f1FontBold(size: 16)).padding()
+                            
+                            if (viewModel.constructorStandings.count > 0) {
+                                ForEach(viewModel.constructorStandings.first(5), id: \.constructor.constructorId) { constructorStanding in
+                                    PVSimpleListItemView(left: constructorStanding.position,
+                                                         main: constructorStanding.constructor.name,
+                                                         right: constructorStanding.points + " pt."
+                                    ).padding(10).onTapGesture(perform: {})
+                                }
+                                
+                                NavigationLink(destination: PVStandingsView()) {
+                                    Text("View All →")
+                                }
                             } else {
                                 Text("No standings yet! Wait the start of the season :)")
                             }
@@ -60,6 +83,7 @@ struct PVMainView: View {
                     
                     }.padding(8).task {
                         viewModel.getSeason()
+                        print(viewModel.constructorStandings)
                     }
                     
                     if viewModel.isLoading {
